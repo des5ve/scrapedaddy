@@ -6,6 +6,6 @@ url = 'http://www.espn.com/mlb/scoreboard'
 response = requests.get(url)
 html = response.content
 soup = BeautifulSoup(html, "html.parser")
-table = soup.find_all("article")
-for link in soup.find_all("article"):
-	print (link)
+#table = soup.find_all("article")
+for link in soup.find_all("section"):
+	print(link)
