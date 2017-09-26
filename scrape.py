@@ -7,5 +7,7 @@ response = requests.get(url)
 html = response.content
 soup = BeautifulSoup(html, "html.parser")
 mainContainer = soup.find(id="score-boxes")
-scores = mainContainer.find_all(class_ = "total-score")
+scores = mainContainer.find_all(class_ = "team-data")
 print (scores)
+#for i in scores.find_all("p"):
+ #   print (i)
