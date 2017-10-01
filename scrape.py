@@ -17,3 +17,11 @@ awayTeamName = awayTeam.find(class_="team-name").find('a').get_text()
 homeTeamName = homeTeam.find(class_="team-name").find('a').get_text()
 print("Home Team: "+homeTeamName+", Score: "+homeTeamScore)
 print("Away Team: "+awayTeamName+", Score: "+awayTeamScore)
+awayScores = [sd.get_text() for sd in mainContainer.select(".away-team .total-score")]
+awayTeams = [sd.get_text() for sd in mainContainer.select(".away-team .team-name")]
+homeScores = [sd.get_text() for sd in mainContainer.select(".home-team .total-score")]
+homeTeams = [sd.get_text() for sd in mainContainer.select(".home-team .team-name")]
+print(awayScores)
+print(awayTeams)
+print(homeScores)
+print(homeTeams)
