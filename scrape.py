@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+import pandas as pd
 import requests
 
 
@@ -25,3 +26,11 @@ print(awayScores)
 print(awayTeams)
 print(homeScores)
 print(homeTeams)
+TeamScoreInfo = pd.DataFrame({
+    "Away Scores" :awayScores,
+    "Away Teams": awayTeams,
+    "Home Scores" : homeScores,
+    "Home Teams" : homeTeams
+})
+
+print (TeamScoreInfo)
