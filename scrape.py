@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 
 
-url = 'http://www.nfl.com/scores/2017/REG3'
+url = 'http://www.nfl.com/scores'
 response = requests.get(url)
 html = response.content
 soup = BeautifulSoup(html, "html.parser")
