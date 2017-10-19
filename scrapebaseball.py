@@ -11,4 +11,7 @@ soup = BeautifulSoup(html, "html.parser")
 mainContainer = soup.find(id = "scores_index")
 scoreboard = mainContainer.find(class_ = "l-grid__content l-grid__content--none")
 scores = scoreboard.find(class_ = "mlb-scores mlb-scores--responsive mlb-scores--desktop")
-print (scoreboard)
+
+mainScoresContainer = soup.find(class_ = "mlb-scores")
+
+print (mainScoresContainer)
