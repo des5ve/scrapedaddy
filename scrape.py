@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 import pandas as pd
 import requests
+import psycopg2
+
 
 
 url = 'http://www.nfl.com/scores'
@@ -8,7 +10,6 @@ response = requests.get(url)
 html = response.content
 soup = BeautifulSoup(html, "html.parser")
 mainContainer = soup.find(id="score-boxes")
-#mainContainer = soup.find(class_="score-boxes")
 scoreBoard = mainContainer.find(class_="scorebox-wrapper")
 awayTeam = scoreBoard.find(class_="away-team")
 homeTeam = scoreBoard.find(class_="home-team")
@@ -34,3 +35,14 @@ TeamScoreInfo = pd.DataFrame({
 })
 
 print (TeamScoreInfo)
+
+##Connecting to the Datbase
+
+def insert(table, columns, values):
+    conn = psycopg2.connect(host="ec2-18-221-213-202.us-east-2.compute.amazonaws.com", port="5432",
+                        database="nfl-scraper-db", user="Danny", password="danny")
+    mark = connection.cursor()
+      statement = 'INSERT INTO ' + table + ' (' + columns + ') VALUES (' + values + ')'
+      mark.execute(statement)
+      connection.commit()
+      return
