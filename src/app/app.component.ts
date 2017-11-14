@@ -5,4 +5,11 @@ import { Component } from '@angular/core';
   moduleId: module.id,
   templateUrl: 'app.component.html'
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent  { 
+//[] means property binding - one way up C to D
+// () means event binding - D to C
+
+  name = 'Angular'; 
+
+
+}
