@@ -23,3 +23,10 @@ img{
 td{
     width: 20
 }
+.quarter{
+   font-size: 10 px; 
+}
+thead{
+    background-color: black;
+    color:white
+}
