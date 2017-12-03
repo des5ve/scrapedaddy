@@ -34,3 +34,6 @@ thead{
     width: 40px;
     height: 40px
 }
+table, th, td {
+    border: 1px solid white;
+}
