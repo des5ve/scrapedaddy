@@ -30,3 +30,7 @@ thead{
     background-color: black;
     color:white
 }
+.image-container{
+    width: 40px;
+    height: 40px
+}
