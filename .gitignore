@@ -10,5 +10,10 @@ src/**/*.js
 *.js.map
 e2e/**/*.js
 e2e/**/*.js.map
+.ipynb_checkpoints
+.vscode
 _test-output
 _temp
+*.iml
+.DS_Store
+package-lock.json

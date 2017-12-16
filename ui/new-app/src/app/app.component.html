@@ -1,0 +1,72 @@
+<h1>Hello you {{name}}</h1>
+<h1>Smush this face</h1>
+<!-- Scoreboard building -->
+<table *ngFor="let score of scores">
+  <thead>
+  <tr>
+    <th>Final</th>
+    <th></th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>T</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class = "Away">
+    <td class = "Image">
+      <img class = "logo" src="http://prod.static.giants.clubs.nfl.com/nfl-assets/img/gbl-ico-team/NYG/logos/home/large.png"/>
+    </td>
+    <td class = "Away">
+      <div class ="Team-Name">{{score.awayTeam}} </div>
+      <div class = "teamRecord"> ({{score.awayWins}}-{{score.awayLosses}})</div>
+    </td>
+    <td class = "quarter">1</td>
+    <td class = "quarter">2</td>
+    <td class = "quarter">3</td>
+    <td class = "quarter">4</td>
+    <td>{{score.awayScore}}</td>
+  </tr>
+  <tr class = "Home">
+    <td class = "Image">
+      <img src="http://jonvilma.com/images/atlanta-falcons--1.jpg" >
+    </td>
+    <td class = "Home">
+      <div class ="Team-Name">{{score.homeTeam}} </div>
+      <div class = "teamRecord"> ({{score.homeWins}}-{{score.homeLosses}})</div>
+    </td>
+    <td class = "quarter">1</td>
+    <td class = "quarter">2</td>
+    <td class = "quarter">3</td>
+    <td class = "quarter">4</td>
+    <td>{{score.homeScore}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Sup?
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Eat my ass, Taylor
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
