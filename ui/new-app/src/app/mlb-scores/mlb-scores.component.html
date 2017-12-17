@@ -1,0 +1,58 @@
+<table *ngFor="let score of scores">
+  <thead>
+  <tr>
+    <th>{{score.gameStatus}}</th>
+    <th></th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>1</th>
+    <th>T</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class = "Away">
+    <td class = "Image">
+      <img class = "logo" src="https://cdn.bleacherreport.net/images/team_logos/328x328/new_york_yankees.png"/>
+    </td>
+    <td class = "Away">
+      <div class ="Team-Name">{{score.awayTeam}} </div>
+      <div class = "teamRecord"> ({{score.awayWins}}-{{score.awayLosses}})</div>
+    </td>
+    <td class = "quarter">{{score.awayInning1}}</td>
+    <td class = "quarter">{{score.awayInning2}}</td>
+    <td class = "quarter">{{score.awayInning3}}</td>
+    <td class = "quarter">{{score.awayInning4}}</td>
+    <td class = "quarter">{{score.awayInning5}}</td>
+    <td class = "quarter">{{score.awayInning6}}</td>
+    <td class = "quarter">{{score.awayInning7}}</td>
+    <td class = "quarter">{{score.awayInning8}}</td>
+    <td class = "quarter">{{score.awayInning9}}</td>
+    <td>{{score.awayScore}}</td>
+  </tr>
+  <tr class = "Home">
+    <td class = "Image">
+      <img src="http://1000logos.net/wp-content/uploads/2017/08/Atlanta-Braves-Logo.png" >
+    </td>
+    <td class = "Home">
+      <div class ="Team-Name">{{score.homeTeam}} </div>
+      <div class = "teamRecord"> ({{score.homeWins}}-{{score.homeLosses}})</div>
+    </td>
+    <td class = "quarter">{{score.homeInning1}}</td>
+    <td class = "quarter">{{score.homeInning2}}</td>
+    <td class = "quarter">{{score.homeInning3}}</td>
+    <td class = "quarter">{{score.homeInning4}}</td>
+    <td class = "quarter">{{score.homeInning5}}</td>
+    <td class = "quarter">{{score.homeInning6}}</td>
+    <td class = "quarter">{{score.homeInning7}}</td>
+    <td class = "quarter">{{score.homeInning8}}</td>
+    <td class = "quarter">{{score.homeInning9}}</td>
+    <td>{{score.homeScore}}</td>
+  </tr>
+  </tbody>
+</table>

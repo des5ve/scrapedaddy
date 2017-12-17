@@ -1,0 +1,43 @@
+<table *ngFor="let score of scores">
+  <thead>
+  <tr>
+    <th>{{score.gameStatus}}</th>
+    <th></th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>T</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class = "Away">
+    <td class = "Image">
+      <img class = "logo" src="http://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/27/2016/10/07193054/warriors-300x300.png"/>
+    </td>
+    <td class = "Away">
+      <div class ="Team-Name">{{score.awayTeam}} </div>
+      <div class = "teamRecord"> ({{score.awayWins}}-{{score.awayLosses}})</div>
+    </td>
+    <td class = "quarter">{{score.awayq1Score}}</td>
+    <td class = "quarter">{{score.awayq2Score}}</td>
+    <td class = "quarter">{{score.awayq3Score}}</td>
+    <td class = "quarter">{{score.awayq4Score}}</td>
+    <td>{{score.awayScore}}</td>
+  </tr>
+  <tr class = "Home">
+    <td class = "Image">
+      <img src="http://a4.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fnba%2F500%2Fcle.png" >
+    </td>
+    <td class = "Home">
+      <div class ="Team-Name">{{score.homeTeam}} </div>
+      <div class = "teamRecord"> ({{score.homeWins}}-{{score.homeLosses}})</div>
+    </td>
+    <td class = "quarter">{{score.homeq1Score}}</td>
+    <td class = "quarter">{{score.homeq2Score}}</td>
+    <td class = "quarter">{{score.homeq3Score}}</td>
+    <td class = "quarter">{{score.homeq4Score}}</td>
+    <td>{{score.homeScore}}</td>
+  </tr>
+  </tbody>
+</table>
