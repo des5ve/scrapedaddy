@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
+import {RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 import {HttpModule} from "@angular/http";
 import {ScoresService} from "./services/scores.service";
@@ -22,6 +22,10 @@ import { MlbScoresComponent } from './mlb-scores/mlb-scores.component';
   imports: [
     BrowserModule,
     HttpModule,
+    RouterModule.forRoot([
+        {path: 'nfl-scores', component: nfl-scores},
+        {path: '', redirectTo: 'nfl-scores', pathMatch: 'full'}
+    ])
   ],
   providers: [ScoresService],
   bootstrap: [AppComponent]
