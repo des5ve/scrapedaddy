@@ -2,8 +2,8 @@ table{
   font-family: 'Bungee Inline';
   border: 1px solid white;
 }
-h1{
-  background-color: lightblue
+.Opener{
+  width: 110px;
 }
 .Away{
   background-color: black;
