@@ -24,6 +24,8 @@ import { MlbScoresComponent } from './mlb-scores/mlb-scores.component';
     HttpModule,
     RouterModule.forRoot([
         {path: 'nfl-scores', component: NflScoresComponent},
+        {path: 'nba-scores', component: NbaScoresComponent},
+        {path: 'mlb-scores', component: MlbScoresComponent},
         {path: '', redirectTo: 'nfl-scores', pathMatch: 'full'}
     ])
   ],
