@@ -1,60 +1,64 @@
 table{
   font-family: 'Bungee Inline';
   border: 1px solid white;
+  width: 25%;
 }
-.Opener{
+/* .Opener{
   width: 110px;
-}
-.Away{
+} */
+.away{
   background-color: black;
   color:white;
   vertical-align: center;
 }
-.Home{
+.home{
   background-color: black;
   color:white
 }
-.Full Scoreboard{
+.full-scoreboard{
   color: white
 
 }
-table{
-  width: 25%;
-}
-
 thead{
   background-color: black;
   color:white
 }
-.image-container{
+/* .image-container{
   width: 40px;
   height: 40px
-}
+} */
 .quarter{
   color: greenyellow;
-
-
+  vertical-align: middle;
 }
-.teamRecord{
+.final{
+  vertical-align: middle;
+}
+.team-record{
   color: greenyellow;
   text-align: left;
   font-size: 10px
 }
-.Team-Name{
+.team-name{
   color:mediumvioletred;
   text-align: left;
 
 }
-
-img{
-  width: 35px;
-  height: 35px;
+.borderless td, .borderless th {
+  border: none;
 }
+
 .logo{
-  padding-right: 1px;
+  max-width: 35px;
+  max-height: 35px;
 }
-.Align{
-  width: 5px;
-  margin:1px;
-
- }
+.image{
+  max-width: 35px;
+  max-height: 35px;
+}
+.game-status{
+  max-width: 40px;
+}
+.team-info{
+  margin-bottom: 3px;
+}
