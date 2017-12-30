@@ -57,7 +57,8 @@ thead{
   max-height: 35px;
 }
 .game-status{
-  max-width: 40px;
+  width: 210px;
+  padding: 4.8px;
 }
 .team-info{
   margin-bottom: 3px;
