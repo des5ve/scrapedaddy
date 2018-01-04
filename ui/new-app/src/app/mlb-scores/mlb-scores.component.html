@@ -1,28 +1,29 @@
-<table *ngFor="let score of scores">
+<table *ngFor="let score of scores" class="table table-sm borderless">
   <thead>
   <tr>
-    <th>{{score.gameStatus}}</th>
-    <th></th>
-    <th>1</th>
-    <th>2</th>
-    <th>3</th>
-    <th>4</th>
-    <th>1</th>
-    <th>2</th>
-    <th>3</th>
-    <th>4</th>
-    <th>1</th>
-    <th>T</th>
+    <th class = "game-status" scope="col" colspan="2">{{score.gameStatus}}</th>
+    <th scope="col">1</th>
+    <th scope="col">2</th>
+    <th scope="col">3</th>
+    <th scope="col">4</th>
+    <th scope="col">5</th>
+    <th scope="col">6</th>
+    <th scope="col">7</th>
+    <th scope="col">8</th>
+    <th scope="col">9</th>
+    <th scope="col">T</th>
   </tr>
   </thead>
   <tbody>
-  <tr class = "Away">
-    <td class = "Image">
+  <tr class = "away">
+    <td class = "image">
       <img class = "logo" src="https://cdn.bleacherreport.net/images/team_logos/328x328/new_york_yankees.png"/>
     </td>
-    <td class = "Away">
-      <div class ="Team-Name">{{score.awayTeam}} </div>
-      <div class = "teamRecord"> ({{score.awayWins}}-{{score.awayLosses}})</div>
+    <td>
+      <div class="team-info">
+        <div class ="team-name">{{score.awayTeam}} </div>
+        <div class = "team-record"> ({{score.awayWins}}-{{score.awayLosses}})</div>
+      </div>
     </td>
     <td class = "quarter">{{score.awayInning1}}</td>
     <td class = "quarter">{{score.awayInning2}}</td>
@@ -33,15 +34,17 @@
     <td class = "quarter">{{score.awayInning7}}</td>
     <td class = "quarter">{{score.awayInning8}}</td>
     <td class = "quarter">{{score.awayInning9}}</td>
-    <td>{{score.awayScore}}</td>
+    <td class = "final">{{score.awayScore}}</td>
   </tr>
-  <tr class = "Home">
-    <td class = "Image">
-      <img src="http://1000logos.net/wp-content/uploads/2017/08/Atlanta-Braves-Logo.png" >
+  <tr class = "home">
+    <td class = "image">
+      <img class="logo" src="http://1000logos.net/wp-content/uploads/2017/08/Atlanta-Braves-Logo.png" >
     </td>
-    <td class = "Home">
-      <div class ="Team-Name">{{score.homeTeam}} </div>
-      <div class = "teamRecord"> ({{score.homeWins}}-{{score.homeLosses}})</div>
+    <td>
+      <div class="team-info">
+        <div class ="team-name">{{score.homeTeam}} </div>
+        <div class = "team-record"> ({{score.homeWins}}-{{score.homeLosses}})</div>
+      </div>
     </td>
     <td class = "quarter">{{score.homeInning1}}</td>
     <td class = "quarter">{{score.homeInning2}}</td>
@@ -52,7 +55,7 @@
     <td class = "quarter">{{score.homeInning7}}</td>
     <td class = "quarter">{{score.homeInning8}}</td>
     <td class = "quarter">{{score.homeInning9}}</td>
-    <td>{{score.homeScore}}</td>
+    <td class = "final">{{score.homeScore}}</td>
   </tr>
   </tbody>
 </table>

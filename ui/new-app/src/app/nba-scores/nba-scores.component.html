@@ -1,43 +1,46 @@
-<table *ngFor="let score of scores">
+<table *ngFor="let score of scores" class="table table-sm borderless">
   <thead>
   <tr>
-    <th>{{score.gameStatus}}</th>
-    <th></th>
-    <th>1</th>
-    <th>2</th>
-    <th>3</th>
-    <th>4</th>
-    <th>T</th>
+    <th class = "game-status" scope="col" colspan="2">{{score.gameStatus}}</th>
+    <th scope="col">1</th>
+    <th scope="col">2</th>
+    <th scope="col">3</th>
+    <th scope="col">4</th>
+    <th scope="col">T</th>
   </tr>
   </thead>
   <tbody>
-  <tr class = "Away">
-    <td class = "Image">
+  <tr class = "away">
+    <td class = "image">
       <img class = "logo" src="http://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/27/2016/10/07193054/warriors-300x300.png"/>
     </td>
-    <td class = "Away">
-      <div class ="Team-Name">{{score.awayTeam}} </div>
-      <div class = "teamRecord"> ({{score.awayWins}}-{{score.awayLosses}})</div>
+    <td>
+      <div class="team-info">
+        <div class ="team-name">{{score.awayTeam}} </div>
+        <div class = "team-record"> ({{score.awayWins}}-{{score.awayLosses}})</div>
+      </div>
     </td>
     <td class = "quarter">{{score.awayq1Score}}</td>
     <td class = "quarter">{{score.awayq2Score}}</td>
     <td class = "quarter">{{score.awayq3Score}}</td>
     <td class = "quarter">{{score.awayq4Score}}</td>
-    <td>{{score.awayScore}}</td>
+    <td class = "final">{{score.awayScore}}</td>
   </tr>
-  <tr class = "Home">
-    <td class = "Image">
-      <img src="http://a4.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fnba%2F500%2Fcle.png" >
+  <tr class = "home">
+    <td class = "image">
+      <img class="logo" src="http://a4.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fnba%2F500%2Fcle.png" >
     </td>
-    <td class = "Home">
-      <div class ="Team-Name">{{score.homeTeam}} </div>
-      <div class = "teamRecord"> ({{score.homeWins}}-{{score.homeLosses}})</div>
+    <td>
+      <div class="team-info">
+        <div class ="team-name">{{score.homeTeam}} </div>
+        <div class = "team-record"> ({{score.homeWins}}-{{score.homeLosses}})</div>
+      </div>
     </td>
     <td class = "quarter">{{score.homeq1Score}}</td>
     <td class = "quarter">{{score.homeq2Score}}</td>
     <td class = "quarter">{{score.homeq3Score}}</td>
     <td class = "quarter">{{score.homeq4Score}}</td>
-    <td>{{score.homeScore}}</td>
+    <td class = "final">{{score.homeScore}}</td>
   </tr>
   </tbody>
 </table>
