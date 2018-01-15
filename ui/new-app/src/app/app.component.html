@@ -9,10 +9,12 @@
   </div>
 </section>
 <!-- Scoreboard building -->
-<div class="scoreboard-picker btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-secondary"[routerLink]="['/nfl-scores']">nfl</button>
-  <button type="button" class="btn btn-secondary"[routerLink]="['/nba-scores']">nba</button>
-  <button type="button" class="btn btn-secondary"[routerLink]="['/mlb-scores']">mlb</button>
+<div class="scoreboard-picker">
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-secondary"[routerLink]="['/nfl-scores']">nfl</button>
+    <button type="button" class="btn btn-secondary"[routerLink]="['/nba-scores']">nba</button>
+    <button type="button" class="btn btn-secondary"[routerLink]="['/mlb-scores']">mlb</button>
+  </div>
 </div>
 <router-outlet></router-outlet>
 <router-outlet></router-outlet>
