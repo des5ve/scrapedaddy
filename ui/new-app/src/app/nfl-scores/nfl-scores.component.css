@@ -37,16 +37,16 @@ table{
 }
 
 .game-status{
-  max-width: 0px;
- 
-} 
+  min-width: 184px;
+  text-align: left;
+}
 .team-info{
   margin-bottom: 3px;
-}
-.game-status{
-  text-align: left;
 }
 .image{
   padding: 0px;
   width: 45px;
+}
+.scoreboard{
+  display: inline-block
 }
