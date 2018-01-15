@@ -53,3 +53,7 @@ table{
 .scoreboard{
   display: inline-block
 }
+.nba-scores{
+  margin: 0 auto;
+  display: table;
+}

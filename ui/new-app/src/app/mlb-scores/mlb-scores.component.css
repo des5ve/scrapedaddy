@@ -54,3 +54,7 @@ table{
 .scoreboard{
   display: inline-block
 }
+.mlb-scores{
+  margin: 0 auto;
+  display: table;
+}
