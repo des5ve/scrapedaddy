@@ -1,35 +1,16 @@
 table{
   font-family: 'Bungee Inline';
   border: 1px solid white;
-  width: 25%;
-}
-/* .Opener{
-  width: 110px;
-} */
-.away{
+  width: 400px;
+  text-align: center;
   background-color: black;
   color:white;
-  vertical-align: center;
 }
-.home{
-  background-color: black;
-  color:white
-}
-.full-scoreboard{
-  color: white
 
-}
-thead{
-  background-color: black;
-  color:white
-}
-/* .image-container{
-  width: 40px;
-  height: 40px
-} */
 .quarter{
   color: greenyellow;
   vertical-align: middle;
+  width: 45px;
 }
 .final{
   vertical-align: middle;
@@ -51,16 +32,21 @@ thead{
 .logo{
   max-width: 35px;
   max-height: 35px;
+  margin: 5px;
+  
 }
-.image{
-  max-width: 35px;
-  max-height: 35px;
-}
+
 .game-status{
   max-width: 0px;
-  /*width: 210px;
-  padding: 4.8px;*/
-}
+ 
+} 
 .team-info{
   margin-bottom: 3px;
+}
+.game-status{
+  text-align: left;
+}
+.image{
+  padding: 0px;
+  width: 45px;
 }

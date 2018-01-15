@@ -23,7 +23,7 @@ export class ScoresService implements iScoreService{
       gameTime: '10-DEC-2017 8:30 EST', homeLosses: 2, homeWins: 0, awayWins: 2, awayLosses: 0, awayq1Score: 0, awayq2Score: 0, awayq3Score: 0, awayq4Score: 0,
       homeq1Score: 0, homeq2Score: 0, homeq3Score: 0, homeq4Score: 0},
     {gameId: 2, homeTeam: 'NYJ', homeScore: 0, awayTeam: 'NE', awayScore: 0, gameStatus: 'LIVE', currentQuarter: 2, currentTime: '15:00',
-      gameTime: '10-DEC-2017 4:15 EST', homeLosses: 2, homeWins: 0, awayWins: 2, awayLosses: 0, awayq1Score: 7, awayq2Score: 0, awayq3Score: 0, awayq4Score: 0,
+      gameTime: '10-DEC-2017 4:15 EST', homeLosses: 2, homeWins: 0, awayWins: 2, awayLosses: 0, awayq1Score: 10, awayq2Score: 0, awayq3Score: 0, awayq4Score: 0,
       homeq1Score: 3, homeq2Score: 0, homeq3Score: 0, homeq4Score: 0},
     {gameId: 3, homeTeam: 'WAS', homeScore: 0, awayTeam: 'PHI', awayScore: 0, gameStatus: 'FINAL', currentQuarter: 4, currentTime: '0:00',
       gameTime: '10-DEC-2017 1:00 EST', homeLosses: 2, homeWins: 0, awayWins: 2, awayLosses: 0, awayq1Score: 7, awayq2Score: 7, awayq3Score: 7, awayq4Score: 7,

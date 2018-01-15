@@ -7,10 +7,10 @@ table{
   color:white;
 }
 
-
 .quarter{
   color: greenyellow;
   vertical-align: middle;
+  width: 45px;
 }
 .final{
   vertical-align: middle;
@@ -32,6 +32,7 @@ table{
 .logo{
   max-width: 35px;
   max-height: 35px;
+  margin: 5px;
   
 }
 
