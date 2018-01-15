@@ -80,3 +80,7 @@ img{
   background-color: black;
   color:white
 }
+
+.scoreboard-picker{
+  vertical-align: top;
+}

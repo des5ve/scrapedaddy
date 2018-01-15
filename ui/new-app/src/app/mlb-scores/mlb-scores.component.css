@@ -50,3 +50,6 @@ table{
   padding: 0px;
   width: 45px;
 }
+.scoreboard{
+  display: inline-block
+}
