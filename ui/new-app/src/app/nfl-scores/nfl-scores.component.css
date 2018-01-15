@@ -3,25 +3,10 @@ table{
   border: 1px solid white;
   width: 400px;
   text-align: center;
-}
-
-.away{
   background-color: black;
   color:white;
-  vertical-align: center;
 }
-.home{
-  background-color: black;
-  color:white
-}
-.full-scoreboard{
-  color: white
 
-}
-thead{
-  background-color: black;
-  color:white
-}
 
 .quarter{
   color: greenyellow;
