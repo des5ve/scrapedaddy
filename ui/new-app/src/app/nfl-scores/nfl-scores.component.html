@@ -1,7 +1,7 @@
 <table *ngFor="let score of scores" class="table table-sm borderless">
   <thead>
   <tr>
-    <th class = "game-status" scope="col" colspan="2">{{score.gameStatus}}</th>
+    <th class = "game-status" scope="col" colspan="3">{{score.gameStatus}}</th>
     <th scope="col">1</th>
     <th scope="col">2</th>
     <th scope="col">3</th>
@@ -11,10 +11,10 @@
   </thead>
   <tbody>
   <tr class = "away">
-    <td class = "image">
+    <td colspan = "1"class = "image">
       <img class = "logo" src="http://prod.static.giants.clubs.nfl.com/nfl-assets/img/gbl-ico-team/NYG/logos/home/large.png"/>
     </td>
-    <td>
+    <td colspan = "2">
       <div class="team-info">
         <div class ="team-name">{{score.awayTeam}} </div>
         <div class = "team-record"> ({{score.awayWins}}-{{score.awayLosses}})</div>
@@ -27,10 +27,10 @@
     <td class = "final">{{score.awayScore}}</td>
   </tr>
   <tr class = "home">
-    <td class = "image">
+    <td colspan = "1"class = "image">
       <img class="logo" src="http://jonvilma.com/images/atlanta-falcons--1.jpg" >
     </td>
-    <td class = "home">
+    <td colspan = "2">
       <div class="team-info">
         <div class ="team-name">{{score.homeTeam}} </div>
         <div class = "team-record"> ({{score.homeWins}}-{{score.homeLosses}})</div>
