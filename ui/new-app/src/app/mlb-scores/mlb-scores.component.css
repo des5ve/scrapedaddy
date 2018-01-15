@@ -37,9 +37,9 @@ table{
 }
 
 .game-status{
-  max-width: 0px;
- 
+  min-width: 184px;
 } 
+
 .team-info{
   margin-bottom: 3px;
 }

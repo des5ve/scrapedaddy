@@ -34,9 +34,9 @@ export class ScoresService implements iScoreService{
     {gameId: 1, homeTeam: 'ATL', homeScore: 98, awayTeam: 'CLE', awayScore: 96, gameStatus: 'FINAL', currentQuarter: 4, currentTime: '15:00',
       gameTime: '10-DEC-2017 7:30 EST', homeLosses: 2, homeWins: 0, awayWins: 2, awayLosses: 0, awayq1Score: 23, awayq2Score: 23, awayq3Score: 23, awayq4Score: 23,
       homeq1Score: 21, homeq2Score: 21, homeq3Score: 21, homeq4Score: 21},
-    {gameId: 2, homeTeam: 'NYK', homeScore: 0, awayTeam: 'GS', awayScore: 0, gameStatus: 'SCHEDULED', currentQuarter: 0, currentTime: '15:00',
-      gameTime: '10-DEC-2017 10:30 EST', homeLosses: 2, homeWins: 0, awayWins: 2, awayLosses: 0, awayq1Score: 0, awayq2Score: 0, awayq3Score: 0, awayq4Score: 0,
-      homeq1Score: 0, homeq2Score: 0, homeq3Score: 0, homeq4Score: 0},
+    {gameId: 2, homeTeam: 'NYK', homeScore: 98, awayTeam: 'GS', awayScore: 98, gameStatus: 'SCHEDULED', currentQuarter: 0, currentTime: '15:00',
+      gameTime: '10-DEC-2017 10:30 EST', homeLosses: 2, homeWins: 0, awayWins: 2, awayLosses: 0, awayq1Score: 23, awayq2Score: 23, awayq3Score: 23, awayq4Score: 23,
+      homeq1Score: 21, homeq2Score: 32, homeq3Score: 32, homeq4Score: 32},
     {gameId: 3, homeTeam: 'CHA', homeScore: 76, awayTeam: 'PHI', awayScore: 70, gameStatus: 'LIVE', currentQuarter: 4, currentTime: '7:00',
       gameTime: '10-DEC-2017 8:00 EST', homeLosses: 2, homeWins: 0, awayWins: 2, awayLosses: 0, awayq1Score: 23, awayq2Score: 23, awayq3Score: 23, awayq4Score: 0,
       homeq1Score: 21, homeq2Score: 21, homeq3Score: 21, homeq4Score: 12}
