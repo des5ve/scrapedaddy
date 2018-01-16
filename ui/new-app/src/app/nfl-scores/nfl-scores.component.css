@@ -55,3 +55,6 @@ table{
   margin: 0 auto;
   display: table;
 }
+.place-bet-icon{
+  float: right;
+}
