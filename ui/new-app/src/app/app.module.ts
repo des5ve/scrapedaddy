@@ -9,6 +9,8 @@ import { SportSelectorComponent } from './sport-selector/sport-selector.componen
 import { NflScoresComponent } from './nfl-scores/nfl-scores.component';
 import { NbaScoresComponent } from './nba-scores/nba-scores.component';
 import { MlbScoresComponent } from './mlb-scores/mlb-scores.component';
+import { BettingModalComponent } from './betting-modal/betting-modal.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { MlbScoresComponent } from './mlb-scores/mlb-scores.component';
     SportSelectorComponent,
     NflScoresComponent,
     NbaScoresComponent,
-    MlbScoresComponent
+    MlbScoresComponent,
+    BettingModalComponent
   ],
   imports: [
     BrowserModule,
@@ -27,9 +30,11 @@ import { MlbScoresComponent } from './mlb-scores/mlb-scores.component';
         {path: 'nba-scores', component: NbaScoresComponent},
         {path: 'mlb-scores', component: MlbScoresComponent},
         {path: '', redirectTo: 'nfl-scores', pathMatch: 'full'}
-    ])
+    ]),
+    NgbModule.forRoot()
   ],
   providers: [ScoresService],
+  entryComponents: [BettingModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

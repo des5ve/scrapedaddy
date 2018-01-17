@@ -43,6 +43,7 @@ table{
 }
 .team-info{
   margin-bottom: 3px;
+  float: left;
 }
 .image{
   padding: 0px;
@@ -57,4 +58,5 @@ table{
 }
 .place-bet-icon{
   float: right;
+  margin-top: 10px;
 }

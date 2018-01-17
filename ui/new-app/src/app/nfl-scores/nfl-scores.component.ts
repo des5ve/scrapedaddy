@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {ScoresService} from "../services/scores.service";
-import {NFLScore} from "../models/NFLScore";
+import { ScoresService } from "../services/scores.service";
+import { NFLScore } from "../models/NFLScore";
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap/modal/modal';
+import { BettingModalComponent } from '../betting-modal/betting-modal.component';
 
 @Component({
   selector: 'app-nfl-scores',
@@ -11,7 +13,8 @@ export class NflScoresComponent implements OnInit {
 
   scores: NFLScore[];
 
-  constructor(private scoresService: ScoresService) { }
+  constructor(private scoresService: ScoresService,
+              private modalService: NgbModal) { }
 
   ngOnInit() {
     this.getScores();
@@ -27,6 +30,11 @@ export class NflScoresComponent implements OnInit {
   private setScores(scores: NFLScore[]): void{
     console.log(scores);
     this.scores = scores;
+  }
+
+  open() {
+    const modalRef = this.modalService.open(BettingModalComponent, { size: "lg" });
+    modalRef.componentInstance.name = 'Shashank';
   }
 
 }
