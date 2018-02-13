@@ -11,6 +11,7 @@ import { NbaScoresComponent } from './nba-scores/nba-scores.component';
 import { MlbScoresComponent } from './mlb-scores/mlb-scores.component';
 import { BettingModalComponent } from './betting-modal/betting-modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NflScoresComponent,
     NbaScoresComponent,
     MlbScoresComponent,
-    BettingModalComponent
+    BettingModalComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
