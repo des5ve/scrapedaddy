@@ -12,6 +12,7 @@ import { MlbScoresComponent } from './mlb-scores/mlb-scores.component';
 import { BettingModalComponent } from './betting-modal/betting-modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,6 +28,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
         {path: 'nfl-scores', component: NflScoresComponent},
         {path: 'nba-scores', component: NbaScoresComponent},
