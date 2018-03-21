@@ -7,6 +7,7 @@ import 'rxjs/add/operator/catch';
 import {NFLScore} from "../models/NFLScore";
 import {NBAScore} from "../models/NBAScore";
 import {MLBScore} from "../models/MLBScore";
+import { HttpClient } from '@angular/common/http';
 
 
 export interface iScoreService{
@@ -60,7 +61,7 @@ export class ScoresService implements iScoreService{
       currentStrikes: 0}
   ]
 
-  constructor(private http: Http) {}
+  constructor(private http: HttpClient) {}
 
   getNFLScores(): Observable<NFLScore[]>{
     const url = "https://metr-api.herokuapp.com/locations";
@@ -70,8 +71,7 @@ export class ScoresService implements iScoreService{
 
   getNBAScores(): Observable<NBAScore[]>{
     const url = "https://metr-api.herokuapp.com/locations";
-    return Observable.of(this.nba_scores);
-    //return this.http.get(url).map((res: Response) => res.json());
+    return this.http.get(url).map((res: Response) => res.json());
   }
 
   getMLBScores(): Observable<MLBScore[]>{
