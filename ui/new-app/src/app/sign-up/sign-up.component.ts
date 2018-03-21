@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormBuilder, FormGroup } from '@angular/forms';
 import { User } from '../models/user';
 import { AuthenticationService } from '../services/authentication.service';
-
 
 
 @Component({
@@ -12,25 +11,45 @@ import { AuthenticationService } from '../services/authentication.service';
 })
 export class SignUpComponent implements OnInit {
 
-  email: FormControl = new FormControl();
-  name: FormControl = new FormControl();
-  username: FormControl =  new FormControl();
-  password: FormControl = new FormControl();
-  password2: FormControl = new FormControl();
+  signUpForm: FormGroup;
 
-  constructor(private authenticationService: AuthenticationService) { }
+  // email: FormControl = new FormControl();
+  // name: FormControl = new FormControl();
+  // username: FormControl =  new FormControl();
+  // password: FormControl = new FormControl();
+  // password2: FormControl = new FormControl();
+
+  constructor(private authenticationService: AuthenticationService,
+              private formBuilder: FormBuilder) 
+              { 
+                this.createForm();
+              }
 
   ngOnInit() {
   }
 
+  createForm() {
+
+    this.signUpForm = this.formBuilder.group({
+      email: '',
+      name: '',
+      username: '',
+      password: '',
+      password2: ''
+    })
+
+  }
+
   signup(){
 
+    const signUpModel = this.signUpForm.value;
+
     const userDetails: User = {
-      email:  this.email.value,
-      name: this.name.value,
-      username: this.username.value,
-      password: this.password.value,
-      password2: this.password.value
+      email:  signUpModel.email as string,
+      name: signUpModel.name as string,
+      username: signUpModel.username as string,
+      password: this.signUpForm.get('password').value,
+      password2: this.signUpForm.get('password2').value
     }
 
     console.log(userDetails);
