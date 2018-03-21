@@ -3,6 +3,8 @@ import { FormControl } from '@angular/forms';
 import { User } from '../models/user';
 import { AuthenticationService } from '../services/authentication.service';
 
+
+
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -11,10 +13,10 @@ import { AuthenticationService } from '../services/authentication.service';
 export class SignUpComponent implements OnInit {
 
   email: FormControl = new FormControl();
-  firstName: FormControl = new FormControl();
-  lastName: FormControl = new FormControl();
+  name: FormControl = new FormControl();
   username: FormControl =  new FormControl();
   password: FormControl = new FormControl();
+  password2: FormControl = new FormControl();
 
   constructor(private authenticationService: AuthenticationService) { }
 
@@ -25,10 +27,10 @@ export class SignUpComponent implements OnInit {
 
     const userDetails: User = {
       email:  this.email.value,
-      firstName: this.firstName.value,
-      lastName: this.lastName.value,
+      name: this.name.value,
       username: this.username.value,
-      password: this.password.value
+      password: this.password.value,
+      password2: this.password.value
     }
 
     console.log(userDetails);

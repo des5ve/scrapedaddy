@@ -28,7 +28,7 @@ export class AuthenticationService {
 
   createUser(user: User): void{
     console.log(user);
-    const url = 'https://metr-api.herokuapp.com/locations';
+    const url = 'http://localhost:3000/api/SignUp';
     this.http.post(url, user);
   }
 
