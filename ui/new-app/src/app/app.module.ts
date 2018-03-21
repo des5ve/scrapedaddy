@@ -15,6 +15,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {SignInComponent} from './sign-in/sign-in.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthenticationService } from './services/authentication.service';
 
 
 @NgModule({
@@ -41,7 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
     ]),
     NgbModule.forRoot()
   ],
-  providers: [ScoresService],
+  providers: [ScoresService, AuthenticationService],
   entryComponents: [BettingModalComponent],
   bootstrap: [AppComponent]
 })
