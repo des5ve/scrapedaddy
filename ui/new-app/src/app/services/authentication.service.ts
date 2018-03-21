@@ -5,12 +5,13 @@ import { Http } from '@angular/http/src/http';
 
 export interface iAuthenticationService{
   getUsers(): Observable<User[]>
-  createUser(User): void;
+  createUser(user: User): void;
 }
 @Injectable()
 export class AuthenticationService {
 
   users: User[] = [];
+  returnedUser: User;
 
   constructor(private http: Http) { }
 
@@ -24,10 +25,10 @@ export class AuthenticationService {
 
   }
 
-  createUser(User): void{
-
-    //service call to insert user
-
+  createUser(user: User): void{
+    console.log(user);
+    const url = 'https://metr-api.herokuapp.com/locations';
+    this.http.post(url, user);
   }
 
 }

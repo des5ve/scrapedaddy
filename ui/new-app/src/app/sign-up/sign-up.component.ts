@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { User } from '../models/user';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -15,12 +16,13 @@ export class SignUpComponent implements OnInit {
   username: FormControl =  new FormControl();
   password: FormControl = new FormControl();
 
-  constructor() { }
+  constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
   }
 
   signup(){
+
     const userDetails: User = {
       email:  this.email.value,
       firstName: this.firstName.value,
@@ -28,8 +30,10 @@ export class SignUpComponent implements OnInit {
       username: this.username.value,
       password: this.password.value
     }
-    
+
     console.log(userDetails);
+
+    this.authenticationService.createUser(userDetails);
     
   }
 
