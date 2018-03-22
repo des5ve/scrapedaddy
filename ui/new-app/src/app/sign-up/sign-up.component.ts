@@ -12,6 +12,7 @@ import { AuthenticationService } from '../services/authentication.service';
 export class SignUpComponent implements OnInit {
 
   signUpForm: FormGroup;
+  users: User[];
 
   // email: FormControl = new FormControl();
   // name: FormControl = new FormControl();
@@ -26,7 +27,13 @@ export class SignUpComponent implements OnInit {
               }
 
   ngOnInit() {
+    this.authenticationService.getUsers().subscribe(
+      data => {
+        console.log(data);
+        this.users = data
+      });
   }
+  
 
   createForm() {
 
@@ -51,8 +58,6 @@ export class SignUpComponent implements OnInit {
       password: this.signUpForm.get('password').value,
       password2: this.signUpForm.get('password2').value
     }
-
-    console.log(userDetails);
 
     this.authenticationService.createUser(userDetails);
     
