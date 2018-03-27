@@ -15,4 +15,9 @@ export class BettingModalComponent {
 
   constructor(public activeModal: NgbActiveModal) { }
 
+
+  EnterBet(){
+    
+  }
+
 }
