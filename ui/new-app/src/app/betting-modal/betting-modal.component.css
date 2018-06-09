@@ -5,3 +5,19 @@
   .dark-modal .close {
     color: white;   
   }
+
+  .betbutton{
+    width: 150px;
+    height: 25 px;
+    text-align: center;
+  }
+  .bets{
+    text-align: center;
+  }
+  .team{
+    width: 50px;
+    text-align: center;
+  }
+  .header{
+    display: inline-block;
+  }
