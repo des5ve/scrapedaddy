@@ -1,0 +1,21 @@
+export class NHLScore{
+    public gameId: number;
+    public homeTeam: string;
+    public homeScore: number;
+    public homep1Score: number;
+    public homep2Score: number;
+    public homep3Score: number;
+    public homeWins: number;
+    public homeLosses: number;
+    public awayTeam: string;
+    public awayScore: number;
+    public awayp1Score: number;
+    public awayp2Score: number;
+    public awayp3Score: number;
+    public awayWins: number;
+    public awayLosses: number;
+    public gameStatus: string;
+    public currentPeriod: number;
+    public currentTime: string;
+    public gameTime: string;
+  }

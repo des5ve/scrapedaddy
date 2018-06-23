@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {SignInComponent} from './sign-in/sign-in.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationService } from './services/authentication.service';
+import { NhlScoresComponent } from './nhl-scores/nhl-scores.component';
 
 
 @NgModule({
@@ -25,9 +26,10 @@ import { AuthenticationService } from './services/authentication.service';
     NflScoresComponent,
     NbaScoresComponent,
     MlbScoresComponent,
+    NhlScoresComponent,
     BettingModalComponent,
     SignUpComponent,
-    SignInComponent
+    SignInComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,8 @@ import { AuthenticationService } from './services/authentication.service';
         {path: 'nfl-scores', component: NflScoresComponent},
         {path: 'nba-scores', component: NbaScoresComponent},
         {path: 'mlb-scores', component: MlbScoresComponent},
+        {path: 'nhl-scores', component: NhlScoresComponent},
+
         {path: '', redirectTo: 'nfl-scores', pathMatch: 'full'}
     ]),
     NgbModule.forRoot()

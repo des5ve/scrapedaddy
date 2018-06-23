@@ -7,6 +7,7 @@ import 'rxjs/add/operator/catch';
 import {NFLScore} from "../models/NFLScore";
 import {NBAScore} from "../models/NBAScore";
 import {MLBScore} from "../models/MLBScore";
+import {NHLScore} from "../models/NHLScore";
 import { HttpClient } from '@angular/common/http';
 
 
@@ -14,6 +15,7 @@ export interface iScoreService{
   getNFLScores(): Observable<NFLScore[]>;
   getNBAScores(): Observable<NBAScore[]>;
   getMLBScores(): Observable<MLBScore[]>;
+  getNHLScores(): Observable<NHLScore[]>;
 }
 
 @Injectable()
@@ -61,6 +63,18 @@ export class ScoresService implements iScoreService{
       currentStrikes: 0}
   ]
 
+  nhl_scores : NHLScore[] = [
+    {gameId: 1, homeTeam: 'NYG', homeScore: 0, awayTeam: 'ATL', awayScore: 0, gameStatus: 'SCHEDULED', currentPeriod: 0, currentTime: '20:00',
+      gameTime: '10-DEC-2017 8:30 EST', homeLosses: 2, homeWins: 0, awayWins: 2, awayLosses: 0, awayp1Score: 0, awayp2Score: 0, awayp3Score: 0,
+      homep1Score: 0, homep2Score: 0, homep3Score: 0},
+    {gameId: 2, homeTeam: 'NYJ', homeScore: 0, awayTeam: 'NE', awayScore: 0, gameStatus: 'LIVE', currentPeriod: 2, currentTime: '20:00',
+      gameTime: '10-DEC-2017 4:15 EST', homeLosses: 2, homeWins: 0, awayWins: 2, awayLosses: 0, awayp1Score: 10, awayp2Score: 0, awayp3Score: 0,
+      homep1Score: 3, homep2Score: 0, homep3Score: 0},
+    {gameId: 3, homeTeam: 'WAS', homeScore: 0, awayTeam: 'PHI', awayScore: 0, gameStatus: 'FINAL', currentPeriod: 3, currentTime: '0:00',
+      gameTime: '10-DEC-2017 1:00 EST', homeLosses: 2, homeWins: 0, awayWins: 2, awayLosses: 0, awayp1Score: 7, awayp2Score: 7, awayp3Score: 7,
+      homep1Score: 3, homep2Score: 3, homep3Score: 3}
+  ]  
+
   constructor(private http: HttpClient) {}
 
   getNFLScores(): Observable<NFLScore[]>{
@@ -78,6 +92,11 @@ export class ScoresService implements iScoreService{
     const url = "https://metr-api.herokuapp.com/locations";
     return Observable.of(this.mlb_scores);
     //return this.http.get(url).map((res: Response) => res.json());
+  }
+
+  getNHLScores(): Observable<NHLScore[]>{
+    const url = "https://metr-api.herokuapp.com/locations";
+    return Observable.of(this.nhl_scores);
   }
 
 }
