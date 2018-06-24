@@ -6,22 +6,48 @@
       </button>
   </div>
   <div class="modal-body bets">
-    <div class = "butt">moneyline</div>
-    <div class = "butt">spread</div>
+      <div class="container header">
+          <div class="row">
+            <div class = "smallHeader">
+            </div>
+            <div class = "headerColumn" >
+              Spread
+            </div>
+            <div class = "headerColumn" >
+              Moneyline
+            </div>
+            <div  class = "headerColumn">
+              Total
+            </div>
+          </div>
+        </div>
 
     <div class="btn-group" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-secondary team">DAL</button>
-      <button type="button" class="btn btn-secondary betbutton">-6.5 (-110)</button>
-      <button type="button" class="btn btn-secondary betbutton">-290</button>
-      <button type="button" class="btn btn-secondary betbutton">48.5 (-110)o</button>
+      <button type="button" class="btn btn-secondary betbutton">-6.5 (-110) <i class="fa fa-plus" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-secondary betbutton">-290 <i class="fa fa-plus" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-secondary betbutton">48.5 (-110)o <i class="fa fa-plus" aria-hidden="true"></i></button>
     </div>
     <div class="btn-group" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-secondary team">NYG</button>
-      <button type="button" class="btn btn-secondary betbutton">+6.5 (-115)</button>
-      <button type="button" class="btn btn-secondary betbutton">+270</button>
-      <button type="button" class="btn btn-secondary betbutton">48.5 (-110)u</button>
+      <button type="button" class="btn btn-secondary betbutton">+6.5 (-115) <i class="fa fa-plus" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-secondary betbutton">+270 <i class="fa fa-plus" aria-hidden="true"></i></button>
+      <button type="button" class="btn btn-secondary betbutton">48.5 (-110)u <i class="fa fa-plus" aria-hidden="true"></i></button>
     </div>
   </div>
+  <div class = "bets">
+    <header>
+        <div class = "teamBet">Giants</div>
+        <div class = "smalLine">+6.5</div>
+    </header>
+    
+    <input>
+    <input>
+  </div>
+
+
+
+
   <div class="modal-footer">
       <button type="button" class="btn btn-outline-primary" (click)="activeModal.close('Close click')">Close</button>
       <button type="button" class="btn btn-outline-primary" (click)="EnterBet()">Enter Bet</button>
