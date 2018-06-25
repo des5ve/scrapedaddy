@@ -35,14 +35,15 @@
       <button type="button" class="btn btn-secondary betbutton">48.5 (-110)u <i class="fa fa-plus" aria-hidden="true"></i></button>
     </div>
   </div>
-  <div class = "bets">
-    <header>
-        <div class = "teamBet">Giants</div>
-        <div class = "smalLine">+6.5</div>
+  
+  
+  <div *ngIf ='limboBets && limboBets.length' class = "center">
+    <header *ngFor = 'let limboBet of limboBets'>
+        <span >{{limboBet.teamName}}</span>
+        <span >{{limboBet.line}}</span>
+        <input >
+    <input >
     </header>
-    
-    <input>
-    <input>
   </div>
 
 

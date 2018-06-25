@@ -11,6 +11,20 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap/modal/modal-ref';
 
 export class BettingModalComponent {
 
+
+  limboBets: any[] =[
+    {
+      "teamName": "New York Giants",
+      "line": 6.5,
+
+    },
+    {
+      "teamName": "New York Giants",
+      "line": 49,
+    }
+  ];
+  
+  
   closeResult: string;
 
   constructor(public activeModal: NgbActiveModal) { }

@@ -30,11 +30,6 @@
   .headerColumn{
     width: 150px;
   }
-  .teamBet{
-    display: inline-block;
-    text-align: left;
-  }
-  .smalLine{
-    display: inline-block;
-    text-align: right;
-  }
+.center{
+  text-align: center;
+}
