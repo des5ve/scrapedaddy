@@ -11,6 +11,8 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap/modal/modal-ref';
 
 export class BettingModalComponent {
 
+  showPlus: boolean = false;
+
 
   limboBets: any[] =[
     {
@@ -29,8 +31,13 @@ export class BettingModalComponent {
 
   constructor(public activeModal: NgbActiveModal) { }
 
+  toggleBet(): void{
+    this.showPlus = !this.showPlus;
 
-  EnterBet(){
+  }
+
+
+  addBet(){
     
   }
 

@@ -24,15 +24,15 @@
 
     <div class="btn-group" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-secondary team">DAL</button>
-      <button type="button" class="btn btn-secondary betbutton">-6.5 (-110) <i class="fa fa-plus" aria-hidden="true"></i></button>
-      <button type="button" class="btn btn-secondary betbutton">-290 <i class="fa fa-plus" aria-hidden="true"></i></button>
-      <button type="button" class="btn btn-secondary betbutton">48.5 (-110)o <i class="fa fa-plus" aria-hidden="true"></i></button>
+      <button (click) = 'toggleBet()' type="button" class="btn btn-secondary betbutton">-6.5 (-110) {{showPlus ? '<i class="fa fa-plus" aria-hidden="true"></i>' : '<i class="fa fa-minus-circle" aria-hidden="true"></i>'}}</button>
+      <button (click) = 'toggleBet()' type="button" class="btn btn-secondary betbutton">-290 <i class="fa fa-plus" aria-hidden="true"></i></button>
+      <button (click) = 'toggleBet()' type="button" class="btn btn-secondary betbutton">48.5 (-110)o <i class="fa fa-plus" aria-hidden="true"></i></button>
     </div>
     <div class="btn-group" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-secondary team">NYG</button>
-      <button type="button" class="btn btn-secondary betbutton">+6.5 (-115) <i class="fa fa-plus" aria-hidden="true"></i></button>
-      <button type="button" class="btn btn-secondary betbutton">+270 <i class="fa fa-plus" aria-hidden="true"></i></button>
-      <button type="button" class="btn btn-secondary betbutton">48.5 (-110)u <i class="fa fa-plus" aria-hidden="true"></i></button>
+      <button (click) = 'toggleBet()' type="button" class="btn btn-secondary betbutton">+6.5 (-115) <i class="fa fa-plus" aria-hidden="true"></i></button>
+      <button (click) = 'toggleBet()' type="button" class="btn btn-secondary betbutton">+270 <i class="fa fa-plus" aria-hidden="true"></i></button>
+      <button (click) = 'toggleBet()' type="button" class="btn btn-secondary betbutton">48.5 (-110)u <i class="fa fa-plus" aria-hidden="true"></i></button>
     </div>
   </div>
   
