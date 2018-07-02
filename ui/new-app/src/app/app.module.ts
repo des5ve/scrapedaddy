@@ -17,6 +17,7 @@ import {SignInComponent} from './sign-in/sign-in.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationService } from './services/authentication.service';
 import { NhlScoresComponent } from './nhl-scores/nhl-scores.component';
+import { BetdocketComponent } from './betdocket/betdocket.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { NhlScoresComponent } from './nhl-scores/nhl-scores.component';
     BettingModalComponent,
     SignUpComponent,
     SignInComponent,
+    BetdocketComponent,
   ],
   imports: [
     BrowserModule,
