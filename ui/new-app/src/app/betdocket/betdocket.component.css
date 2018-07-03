@@ -1,5 +1,5 @@
 .table{
-    width: 220px;
+    width: 300px;
     min-height: 300px;
     float: right;
     text-align: center;
@@ -20,5 +20,5 @@
   
   .league{
     border: 1px solid white;
-    width: 20px;
+    width: 100px;
   }

@@ -1,16 +1,16 @@
-<table class="table table-sm">
+<table class="table table-sm" *ngIf="games && games.length">
   <thead>
     <tr>
-      <th class= "league" scope="col"></th>
+      <th class = "league" scope="col">league</th>
       <th class = "matchup" scope="col">matchup</th>
       <th class = "wager" scope="col">wager</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>{{games.league}}</td>
-      <td>{{games.matchup}}</td>
-      <td>{{games.wager}}</td>
+    <tr *ngFor="let game of games">
+      <td class = "league">{{games.league}}</td>
+      <td class = "matchup">{{games.matchup}}</td>
+      <td class = "wager">{{games.wager}}</td>
     </tr>
   </tbody>
 </table>

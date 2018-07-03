@@ -8,6 +8,7 @@ import { GamesService } from "../services/games.service";
 })
 export class BetdocketComponent implements OnInit {
 
+
   games: any[] = [
     {gameId: 1, league: 'NFL', matchup: 'NYG@NYJ', wager: 'NYG -4'},
     {gameId: 2, league: 'NFL', matchup: 'GB@DEN', wager: 'o41.5'},
