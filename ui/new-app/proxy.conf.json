@@ -2,5 +2,9 @@
   "/api":{
     "target":"http://localhost:3000",
     "secure": false  
-    }
+    },
+  "/scores":{
+    "target":"http://localhost:3000",
+    "secure": false
+  }
 }
