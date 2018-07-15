@@ -1,0 +1,50 @@
+<div class="golf-scores">
+  <table *ngFor="let score of scores" class="table table-sm borderless scoreboard">
+    <thead>
+      <th scope="col">player</th>
+      <th scope="col">1</th>
+      <th scope="col">2</th>
+      <th scope="col">3</th>
+      <th scope="col">4</th>
+      <th scope="col">5</th>
+      <th scope="col">6</th>
+      <th scope="col">7</th>
+      <th scope="col">8</th>
+      <th scope="col">9</th>
+      <th scope="col">10</th>
+      <th scope="col">11</th>
+      <th scope="col">12</th>
+      <th scope="col">13</th>
+      <th scope="col">14</th>
+      <th scope="col">15</th>
+      <th scope="col">16</th>
+      <th scope="col">17</th>
+      <th scope="col">18</th>
+      <th scope="col">tot</th>
+    </thead>
+    <tbody>
+      <tr class = "round">
+       <td class = "player">{{score.player}}</td>
+       <td class = "hole">{{score.hole1score}}</td>
+       <td class = "hole">{{score.hole2score}}</td>
+       <td class = "hole">{{score.hole3score}}</td>
+       <td class = "hole">{{score.hole4score}}</td>
+       <td class = "hole">{{score.hole5score}}</td>
+       <td class = "hole">{{score.hole6score}}</td>
+       <td class = "hole">{{score.hole7score}}</td>
+       <td class = "hole">{{score.hole8score}}</td>
+       <td class = "hole">{{score.hole9score}}</td>
+       <td class = "hole">{{score.hole10score}}</td>
+       <td class = "hole">{{score.hole11score}}</td>
+       <td class = "hole">{{score.hole12score}}</td>
+       <td class = "hole">{{score.hole13score}}</td>
+       <td class = "hole">{{score.hole14score}}</td>
+       <td class = "hole">{{score.hole15score}}</td>
+       <td class = "hole">{{score.hole16score}}</td>
+       <td class = "hole">{{score.hole17score}}</td>
+       <td class = "hole">{{score.hole18score}}</td>
+       <td class = "total">{{score.totalscore}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationService } from './services/authentication.service';
 import { NhlScoresComponent } from './nhl-scores/nhl-scores.component';
 import { BetdocketComponent } from './betdocket/betdocket.component';
+import { GolfScoresComponent } from './golf-scores/golf-scores.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { BetdocketComponent } from './betdocket/betdocket.component';
     SignUpComponent,
     SignInComponent,
     BetdocketComponent,
+    GolfScoresComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +45,7 @@ import { BetdocketComponent } from './betdocket/betdocket.component';
         {path: 'nba-scores', component: NbaScoresComponent},
         {path: 'mlb-scores', component: MlbScoresComponent},
         {path: 'nhl-scores', component: NhlScoresComponent},
+        {path: 'golf-scores', component: GolfScoresComponent},
 
         {path: '', redirectTo: 'nfl-scores', pathMatch: 'full'}
     ]),

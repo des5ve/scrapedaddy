@@ -8,6 +8,7 @@ import {NFLScore} from "../models/NFLScore";
 import {NBAScore} from "../models/NBAScore";
 import {MLBScore} from "../models/MLBScore";
 import {NHLScore} from "../models/NHLScore";
+import {GolfScore} from "../models/GolfScore";
 import { HttpClient } from '@angular/common/http';
 
 
@@ -75,6 +76,12 @@ export class ScoresService implements iScoreService{
       homep1Score: 3, homep2Score: 3, homep3Score: 3}
   ]  
 
+  golf_scores : GolfScore[] = [
+    {gameId: 1, player: 'D. Johnson', hole1score: 0, hole2score: 0, hole3score: 0, hole4score: 0, hole5score: 0, hole6score: 0, 
+    hole7score: 0, hole8score: 0, hole9score: 0, hole10score: 0, hole11score: 0, hole12score: 0, hole13score: 0, 
+    hole14score: 0, hole15score: 0, hole16score: 0, hole17score: 0, hole18score: 0, totalscore: 0},
+  ]
+
   constructor(private http: HttpClient) {}
 
   getNFLScores(): Observable<NFLScore[]>{
@@ -99,4 +106,8 @@ export class ScoresService implements iScoreService{
     return Observable.of(this.nhl_scores);
   }
 
+  getGolfScores(): Observable<GolfScore[]>{
+    const url = "https://metr-api.herokuapp.com/locations";
+    return Observable.of(this.golf_scores);
+  }
 }
