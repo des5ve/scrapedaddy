@@ -19,6 +19,7 @@ import { AuthenticationService } from './services/authentication.service';
 import { NhlScoresComponent } from './nhl-scores/nhl-scores.component';
 import { BetdocketComponent } from './betdocket/betdocket.component';
 import { GolfScoresComponent } from './golf-scores/golf-scores.component';
+import { WagersComponent } from './wagers/wagers.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { GolfScoresComponent } from './golf-scores/golf-scores.component';
     SignInComponent,
     BetdocketComponent,
     GolfScoresComponent,
+    WagersComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,7 @@ import { GolfScoresComponent } from './golf-scores/golf-scores.component';
         {path: 'mlb-scores', component: MlbScoresComponent},
         {path: 'nhl-scores', component: NhlScoresComponent},
         {path: 'golf-scores', component: GolfScoresComponent},
-
+        {path: 'wagers', component: WagersComponent},
         {path: '', redirectTo: 'nfl-scores', pathMatch: 'full'}
     ]),
     NgbModule.forRoot()
