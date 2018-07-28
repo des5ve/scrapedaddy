@@ -9,7 +9,7 @@
   .betbutton{
     width: 150px;
     height: 25 px;
-    text-align: center;
+    
   }
   .bets{
     text-align: center;
@@ -30,6 +30,12 @@
   .headerColumn{
     width: 150px;
   }
-.center{
-  text-align: center;
-}
+  .betsStyle{
+    width: 500px;
+    margin-left: 155px;
+    margin-right: 155px;
+  }
+  betTeamName{
+    float: left;
+    margin: 0px;
+  }
