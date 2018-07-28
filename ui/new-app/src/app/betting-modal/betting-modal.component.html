@@ -34,17 +34,34 @@
       <button (click) = 'toggleBet()' type="button" class="btn btn-secondary betbutton">+270 <i class="fa fa-plus" aria-hidden="true"></i></button>
       <button (click) = 'toggleBet()' type="button" class="btn btn-secondary betbutton">48.5 (-110)u <i class="fa fa-plus" aria-hidden="true"></i></button>
     </div>
+
+    <div class="container limbo-bets" *ngIf='showPlus'>
+        <div class="row" *ngFor = 'let limboBet of limboBets'>
+          <div class="col team">
+              {{limboBet.teamName}}
+          </div>
+          <div class="col line">
+              {{limboBet.line}}
+          </div>
+        </div>
+    </div>
   </div>
-  
-  
-  <ng-container *ngIf='showPlus'>
+
+  <!-- <ng-container *ngIf='showPlus'>
   <section  *ngIf ='limboBets && limboBets.length' class = "betsStyle">
     <div *ngFor = 'let limboBet of limboBets'>
+
+      <div>
+        {{limboBet.teamName}}
+      </div>
+      <div>
+        {{limboBet.line}}
+      </div>
         <h5 class = "betTeamName" style="width: 300px;">{{limboBet.teamName}}</h5>
         <span >{{limboBet.line}}</span>
     </div>
   </section>
-</ng-container>
+</ng-container> -->
 
 
 
