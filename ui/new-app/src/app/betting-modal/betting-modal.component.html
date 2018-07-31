@@ -5,7 +5,7 @@
         <span aria-hidden="true">&times;</span>
       </button>
   </div>
-  <div class="modal-body container">
+  <div class="modal-body container bigDad">
       <div class="row"> 
             <div class = "col">
             </div>
@@ -21,33 +21,17 @@
         </div>
 
         <div class = "row">
-            <div class="col">
-                {{matchUp.awayTeamName}}
-            </div>
-            <div class="col">
-                <button type="button" class="btn btn-outline-success">{{matchUp.awayTeamSpread}}</button>
-            </div>
-            <div class="col">
-                <button type="button" class="btn btn-outline-success">{{matchUp.awayTeamMoneyLine}}</button>
-            </div>
-            <div class="col">
-                <button type="button" class="btn btn-outline-success">{{matchUp.totalO}}</button>
-            </div>
+            <div class="col">{{matchUp.awayTeamName}} </div>
+            <button type="button" class="btn btn-outline-success col">{{matchUp.awayTeamSpread}}</button>
+            <button type="button" class="btn btn-outline-success col">{{matchUp.awayTeamMoneyLine}}</button>
+            <button type="button" class="btn btn-outline-success col">{{matchUp.totalO}}</button>
         </div>
-    <div class = "row">
-        <div class="col">
-            {{matchUp.homeTeamName}}
+        <div class = "row">
+            <div class="col">{{matchUp.homeTeamName}} </div>
+            <button type="button" class="btn btn-outline-success col">{{matchUp.homeTeamSpread}}</button>
+            <button type="button" class="btn btn-outline-success col">{{matchUp.homeTeamMoneyLine}}</button>
+            <button type="button" class="btn btn-outline-success col">{{matchUp.totalU}}</button>
         </div>
-        <div class="col">
-            <button type="button" class="btn btn-outline-success">{{matchUp.homeTeamSpread}}</button>
-        </div>
-        <div class="col">
-            <button type="button" class="btn btn-outline-success">{{matchUp.homeTeamMoneyLine}}</button>
-        </div>
-        <div class="col">
-            <button type="button" class="btn btn-outline-success">{{matchUp.totalU}}</button>
-        </div>
-    </div>
 
     <div *ngIf='showPlus'>
         <div class="row" *ngFor = 'let limboBet of limboBets'>
