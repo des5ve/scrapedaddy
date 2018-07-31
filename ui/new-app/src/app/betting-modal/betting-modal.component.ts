@@ -14,14 +14,14 @@ export class BettingModalComponent {
   showPlus: boolean = false;
 
    
-  matchUp = {"awayTeamName": "Dal",
-  "awayTeamSpread": "-6.5 (-110)",
+  matchUp = {"awayTeamName": "DAL",
+  "awayTeamSpread": "-6.5(-115)",
   "awayTeamMoneyLine": "-290",
   "totalO": "O48.5 (-110)",
   "homeTeamName": "NYG",
-  "homeTeamSpread": "+6.5 (-115)",
-  "homeTeamMoneyline": "+270",
-  "totalU": "U 48.5 (-110)"
+  "homeTeamSpread": "+6.5(-115)",
+  "homeTeamMoneyLine": "+270",
+  "totalU": "U48.5 (-110)"
   }
 
   
@@ -29,7 +29,7 @@ export class BettingModalComponent {
   limboBets: any[] =[
     {
       "teamName": "New York Giants",
-      "line": 6.5,
+      "line": "+6.5 (-115)",
 
     },
     // {

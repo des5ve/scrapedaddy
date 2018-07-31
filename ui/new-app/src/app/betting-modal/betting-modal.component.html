@@ -5,65 +5,76 @@
         <span aria-hidden="true">&times;</span>
       </button>
   </div>
-  <div class="modal-body bets">
-      <div class="container header">
-          <div class="row">
-            <div class = "smallHeader">
+  <div class="modal-body container">
+      <div class="row"> 
+            <div class = "col">
             </div>
-            <div class = "headerColumn" >
+            <div class = "col" >
               Spread
             </div>
-            <div class = "headerColumn" >
+            <div class = "col" >
               Moneyline
             </div>
-            <div  class = "headerColumn">
+            <div  class = "col">
               Total
             </div>
-          </div>
         </div>
 
-    <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-secondary team">{{matchUp.awayTeamName}}</button>
-      <button (click) = 'toggleBet()' type="button" class="btn btn-secondary betbutton">-6.5 (-110)<i class="fa fa-plus" aria-hidden="true"></i> </button>
-      <button (click) = 'toggleBet()' type="button" class="btn btn-secondary betbutton">-290 <i class="fa fa-plus" aria-hidden="true"></i></button>
-      <button (click) = 'toggleBet()' type="button" class="btn btn-secondary betbutton">48.5 (-110)o <i class="fa fa-plus" aria-hidden="true"></i></button>
-    </div>
-    <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-secondary team">{{matchUp.homeTeamName}}</button>
-      <button (click) = 'toggleBet()' type="button" class="btn btn-secondary betbutton">+6.5 (-115) <i class="fa fa-plus" aria-hidden="true"></i></button>
-      <button (click) = 'toggleBet()' type="button" class="btn btn-secondary betbutton">+270 <i class="fa fa-plus" aria-hidden="true"></i></button>
-      <button (click) = 'toggleBet()' type="button" class="btn btn-secondary betbutton">48.5 (-110)u <i class="fa fa-plus" aria-hidden="true"></i></button>
+        <div class = "row">
+            <div class="col">
+                {{matchUp.awayTeamName}}
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-success">{{matchUp.awayTeamSpread}}</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-success">{{matchUp.awayTeamMoneyLine}}</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-success">{{matchUp.totalO}}</button>
+            </div>
+        </div>
+    <div class = "row">
+        <div class="col">
+            {{matchUp.homeTeamName}}
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-outline-success">{{matchUp.homeTeamSpread}}</button>
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-outline-success">{{matchUp.homeTeamMoneyLine}}</button>
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-outline-success">{{matchUp.totalU}}</button>
+        </div>
     </div>
 
-    <div class="container limbo-bets" *ngIf='showPlus'>
+    <div *ngIf='showPlus'>
         <div class="row" *ngFor = 'let limboBet of limboBets'>
-          <div class="col team">
+          <div class="col">
               {{limboBet.teamName}}
           </div>
-          <div class="col line">
+          <div class="col">
               {{limboBet.line}}
           </div>
         </div>
+        <div class="row">
+            <div class="col">
+                
+            </div>
+            <div class="col">
+                <input type="text">
+            </div>
+            <div class="col">
+                <input type="text">
+            </div>
+            <div class="col">
+                
+            </div>
+        </div>
+        
     </div>
   </div>
-
-  <!-- <ng-container *ngIf='showPlus'>
-  <section  *ngIf ='limboBets && limboBets.length' class = "betsStyle">
-    <div *ngFor = 'let limboBet of limboBets'>
-
-      <div>
-        {{limboBet.teamName}}
-      </div>
-      <div>
-        {{limboBet.line}}
-      </div>
-        <h5 class = "betTeamName" style="width: 300px;">{{limboBet.teamName}}</h5>
-        <span >{{limboBet.line}}</span>
-    </div>
-  </section>
-</ng-container> -->
-
-
 
   <div class="modal-footer">
       <button type="button" class="btn btn-outline-primary" (click)="activeModal.close('Close click')">Close</button>
