@@ -43,9 +43,9 @@ export class BettingModalComponent {
 
   constructor(public activeModal: NgbActiveModal) { }
 
-  toggleBet(): void{
+  toggleBet(event): void{
     this.showPlus = !this.showPlus;
-
+    console.log(event.target.value);
   }
 
 
@@ -54,3 +54,4 @@ export class BettingModalComponent {
   }
 
 }
+

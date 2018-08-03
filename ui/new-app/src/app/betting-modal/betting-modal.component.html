@@ -22,15 +22,15 @@
 
         <div class = "row">
             <div class="col">{{matchUp.awayTeamName}} </div>
-            <button type="button" class="btn btn-outline-success col">{{matchUp.awayTeamSpread}}</button>
-            <button type="button" class="btn btn-outline-success col">{{matchUp.awayTeamMoneyLine}}</button>
-            <button type="button" class="btn btn-outline-success col">{{matchUp.totalO}}</button>
+            <button type="button" (click)="toggleBet($event)"   class="btn btn-outline-success col">{{matchUp.awayTeamSpread}}</button>
+            <button type="button" (click)="toggleBet()" class="btn btn-outline-success col">{{matchUp.awayTeamMoneyLine}}</button>
+            <button type="button" (click)="toggleBet()" class="btn btn-outline-success col">{{matchUp.totalO}}</button>
         </div>
         <div class = "row">
             <div class="col">{{matchUp.homeTeamName}} </div>
-            <button type="button" class="btn btn-outline-success col">{{matchUp.homeTeamSpread}}</button>
-            <button type="button" class="btn btn-outline-success col">{{matchUp.homeTeamMoneyLine}}</button>
-            <button type="button" class="btn btn-outline-success col">{{matchUp.totalU}}</button>
+            <button type="button" (click)="toggleBet()" class="btn btn-outline-success col">{{matchUp.homeTeamSpread}}</button>
+            <button type="button" (click)="toggleBet()" class="btn btn-outline-success col">{{matchUp.homeTeamMoneyLine}}</button>
+            <button type="button" (click)="toggleBet()" class="btn btn-outline-success col">{{matchUp.totalU}}</button>
         </div>
 
     <div *ngIf='showPlus'>
@@ -38,22 +38,16 @@
           <div class="col">
               {{limboBet.teamName}}
           </div>
-          <div class="col">
+          <div class="col rightAlignText">
               {{limboBet.line}}
           </div>
         </div>
         <div class="row">
             <div class="col">
-                
+                <input type="text" placeholder="Risk">
             </div>
             <div class="col">
-                <input type="text">
-            </div>
-            <div class="col">
-                <input type="text">
-            </div>
-            <div class="col">
-                
+                <input type="text" placeholder="To Win" class="col rightAlignText">
             </div>
         </div>
         
