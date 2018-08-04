@@ -9,6 +9,20 @@
 .bigDad{
   max-width: 500px;
 }
+/* .borderForBets{
+  border: 2px solid lightblue;
+  border-radius: 8px;
+} */
+.subHeader{
+  font-size: 80%;
+}
+.matchUp{
+  font-size: 70%;
+  color: blue;
+}
+.topLineBet{
+  padding-bottom: 20px;
+}
 .rightAlignText{
   text-align: right;
 }

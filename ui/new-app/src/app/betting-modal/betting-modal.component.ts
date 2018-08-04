@@ -12,18 +12,24 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap/modal/modal-ref';
 export class BettingModalComponent {
 
   showPlus: boolean = false;
+  betPayload: string = "-290";
+  inputBet: string = "Risk"; 
+  outPutBet: string = "To Win"
 
-   
   matchUp = {"awayTeamName": "DAL",
+  "awayTeamFullName": "Dallas Cowboys",
   "awayTeamSpread": "-6.5(-115)",
   "awayTeamMoneyLine": "-290",
   "totalO": "O48.5 (-110)",
   "homeTeamName": "NYG",
+  "homeTeamFullName":"New York Giants",
   "homeTeamSpread": "+6.5(-115)",
   "homeTeamMoneyLine": "+270",
   "totalU": "U48.5 (-110)"
   }
+  //Variables to bind to created from Team Info
 
+  fullMatchUp: string = this.matchUp.awayTeamFullName + '@' + this.matchUp.homeTeamFullName;
   
   
   limboBets: any[] =[
@@ -32,10 +38,10 @@ export class BettingModalComponent {
       "line": "+6.5 (-115)",
 
     },
-    // {
-    //   "teamName": "New York Giants",
-    //   "line": 49,
-    // }
+  //  {
+  //     "teamName": "New York Giants",
+  //      "line": 49,
+  //    }
   ];
   
   
@@ -43,14 +49,16 @@ export class BettingModalComponent {
 
   constructor(public activeModal: NgbActiveModal) { }
 
-  toggleBet(event): void{
+  toggleBet(value: string){
     this.showPlus = !this.showPlus;
-    console.log(event.target.value);
+    console.log(value);
+
   }
 
 
   addBet(){
-    
+    // this.betPayload = "+6.5 (-115)"
+    console.log(this.betPayload);
   }
 
 }
