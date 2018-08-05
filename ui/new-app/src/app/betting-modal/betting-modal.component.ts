@@ -30,18 +30,18 @@ export class BettingModalComponent {
   //Variables to bind to created from Team Info
 
   fullMatchUp: string = this.matchUp.awayTeamFullName + '@' + this.matchUp.homeTeamFullName;
-  
+  moneyLine: string = "Moneyline";
+  spread: string = "Spread";
+  total: string = "Total";
   
   limboBets: any[] =[
     {
-      "teamName": "New York Giants",
-      "line": "+6.5 (-115)",
+      "bet": "New York Giants",
+      "typeOfBet": "Spread",
+      "odds": "+6.5 (-115)",
 
-    },
-  //  {
-  //     "teamName": "New York Giants",
-  //      "line": 49,
-  //    }
+    }
+   
   ];
   
   
@@ -51,15 +51,10 @@ export class BettingModalComponent {
 
   toggleBet(value: string){
     this.showPlus = !this.showPlus;
-    console.log(value);
-
+    console.log(value.split(","));
+    
   }
 
-
-  addBet(){
-    // this.betPayload = "+6.5 (-115)"
-    console.log(this.betPayload);
-  }
 
 }
 
