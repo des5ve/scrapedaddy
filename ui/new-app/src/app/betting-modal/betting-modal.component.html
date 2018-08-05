@@ -1,6 +1,6 @@
 <span class="betting-modal">
   <div class="modal-header">
-    <h4 class="modal-title">Place your bets</h4>
+    <h4 class="modal-title">{{fullMatchUp}}</h4>
       <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -34,13 +34,13 @@
         </div>
     <ng-container *ngFor = 'let limboBet of limboBets'>
       <div class = "borderForBets" *ngIf='limboBets' >
-          <div class="row">
+          <div class="row topBorder">
             <div class="col topLineBet">
-                <div>{{limboBet.bet}}</div>
+                <div class = "bold">{{limboBet.bet}}</div>
                 <div class = "subHeader">{{limboBet.typeOfBet}}</div>
             </div>
             <div class="col rightAlignText">
-                {{limboBet.odds}}
+                {{limboBet.odds}} <i (click) = "removeBet()"class="fa fa-times-circle" aria-hidden="true"></i>
             </div>
           </div>
           <div class="row">
@@ -48,9 +48,9 @@
           </div>
           <div class="row">
               <div class="col">
-                  <input type="text" [(ngModel)]= 'inputBet'>
+                  <input type="text" placeholder={{inputBet}} >
               </div>
-              <div class="col">
+              <div class="col rightAlignText">
                   <input type="text" placeholder={{outPutBet}} class="col rightAlignText">
               </div>
           </div>

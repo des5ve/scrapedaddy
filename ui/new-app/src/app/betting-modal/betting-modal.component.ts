@@ -29,7 +29,7 @@ export class BettingModalComponent {
   }
   //Variables to bind to created from Team Info
 
-  fullMatchUp: string = this.matchUp.awayTeamFullName + '@' + this.matchUp.homeTeamFullName;
+  fullMatchUp: string = this.matchUp.awayTeamFullName + ' @ ' + this.matchUp.homeTeamFullName;
   moneyLine: string = "Moneyline";
   spread: string = "Spread";
   total: string = "Total";
@@ -39,6 +39,12 @@ export class BettingModalComponent {
       "bet": "New York Giants",
       "typeOfBet": "Spread",
       "odds": "+6.5 (-115)",
+
+    },
+    {
+      "bet": "Over 49",
+      "typeOfBet": "Total",
+      "odds": "-110",
 
     }
    
@@ -52,9 +58,11 @@ export class BettingModalComponent {
   toggleBet(value: string){
     this.showPlus = !this.showPlus;
     console.log(value.split(","));
-    
+    //Need to be able to add this array as an object to the above array
   }
 
-
+  removeBet(): void{
+    //code to remove an object from the array of bets
+  }
 }
 

@@ -1,18 +1,13 @@
-.dark-modal .modal-content {
-    background-color: #292b2c;
-    color: white;
-  }
-  .dark-modal .close {
-    color: white;   
-  }
-
 .bigDad{
   max-width: 500px;
 }
-/* .borderForBets{
-  border: 2px solid lightblue;
-  border-radius: 8px;
-} */
+ .borderForBets{
+  margin: 0px;
+  padding-bottom: 5px;
+}
+.topBorder{
+  border-top-style: groove;
+}
 .subHeader{
   font-size: 80%;
 }
@@ -23,6 +18,10 @@
 .topLineBet{
   padding-bottom: 20px;
 }
+.bold{
+  font-weight: bold;
+}
 .rightAlignText{
   text-align: right;
+  padding-right: 0px;
 }
