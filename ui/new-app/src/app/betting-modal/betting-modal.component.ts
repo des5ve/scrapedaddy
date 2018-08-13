@@ -64,5 +64,15 @@ export class BettingModalComponent {
   removeBet(): void{
     //code to remove an object from the array of bets
   }
+  
+  determineIsWinning(a, b, c): void{
+    if (a > b+c){
+      console.log("winner");
+    } else {
+      console.log("loser");
+  }
+}
+
+
 }
 

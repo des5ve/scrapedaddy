@@ -5,7 +5,7 @@
         <span aria-hidden="true">&times;</span>
       </button>
   </div>
-  <div class="modal-body container bigDad">
+  <div class="modal-body container big-dad">
       <div class="row"> 
             <div class = "col">
             </div>
@@ -33,24 +33,24 @@
             <button type="button" value ="{{matchUp.totalU}}, {{matchUp.homeTeamName}}, {{total}}"  #smasher (click)="toggleBet(smasher.value)" class="btn btn-outline-success col">{{matchUp.totalU}}</button>
         </div>
     <ng-container *ngFor = 'let limboBet of limboBets'>
-      <div class = "borderForBets" *ngIf='limboBets' >
-          <div class="row topBorder">
-            <div class="col topLineBet">
+      <div class = "border-for-bets" *ngIf='limboBets' >
+          <div class="row top-border">
+            <div class="col top-line-bet">
                 <div class = "bold">{{limboBet.bet}}</div>
-                <div class = "subHeader">{{limboBet.typeOfBet}}</div>
+                <div class = "sub-header">{{limboBet.typeOfBet}}</div>
             </div>
-            <div class="col rightAlignText">
+            <div class="col right-align-text">
                 {{limboBet.odds}} <i (click) = "removeBet()"class="fa fa-times-circle" aria-hidden="true"></i>
             </div>
           </div>
           <div class="row">
-            <div class="col matchUp">{{fullMatchUp}}</div>
+            <div class="col match-up">{{fullMatchUp}}</div>
           </div>
           <div class="row">
               <div class="col">
                   <input type="text" placeholder={{inputBet}} >
               </div>
-              <div class="col rightAlignText">
+              <div class="col right-align-text">
                   <input type="text" placeholder={{outPutBet}} class="col rightAlignText">
               </div>
           </div>

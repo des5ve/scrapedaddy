@@ -1,27 +1,27 @@
-.bigDad{
+.big-dad{
   max-width: 500px;
 }
- .borderForBets{
+ .border-for-bets{
   margin: 0px;
   padding-bottom: 5px;
 }
-.topBorder{
+.top-border{
   border-top-style: groove;
 }
-.subHeader{
+.sub-header{
   font-size: 80%;
 }
-.matchUp{
+.match-up{
   font-size: 70%;
   color: blue;
 }
-.topLineBet{
+.top-line-bet{
   padding-bottom: 20px;
 }
 .bold{
   font-weight: bold;
 }
-.rightAlignText{
+.right-align-text{
   text-align: right;
   padding-right: 0px;
 }
