@@ -1,14 +1,64 @@
 <span class="betting-modal">
   <div class="modal-header">
-    <h4 class="modal-title">Place your bets</h4>
+    <h4 class="modal-title">{{fullMatchUp}}</h4>
       <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
         <span aria-hidden="true">&times;</span>
       </button>
   </div>
-  <div class="modal-body">
-    <p>Let's win some money!&hellip;</p>
-    <p>Hi, {{name}}!</p>
+  <div class="modal-body container big-dad">
+      <div class="row"> 
+            <div class = "col">
+            </div>
+            <div class = "col" >
+              {{spread}}
+            </div>
+            <div class = "col" >
+              {{moneyLine}}
+            </div>
+            <div  class = "col">
+              {{total}}
+            </div>
+        </div>
+
+        <div class = "row">
+            <div class="col">{{matchUp.awayTeamName}} </div>
+            <button type="button" value ="{{matchUp.awayTeamName}}, {{spread}}, {{matchUp.awayTeamSpread}}"  #betPayLoadButton (click)="toggleBet(betPayLoadButton.value)"   class="btn btn-outline-success col">{{matchUp.awayTeamSpread}}</button>
+            <button type="button" value = " {{matchUp.awayTeamName}}, {{moneyLine}}, {{matchUp.awayTeamMoneyLine}}" #bettor (click)="toggleBet(bettor.value)" class="btn btn-outline-success col">{{matchUp.awayTeamMoneyLine}}</button>
+            <button type="button" value = "{{matchUp.totalO}}, {{matchUp.awayTeamName}}, {{total}}" #smusher (click)="toggleBet(smusher.value)" class="btn btn-outline-success col">{{matchUp.totalO}}</button>
+        </div>
+        <div class = "row">
+            <div class="col">{{matchUp.homeTeamName}} </div>
+            <button type="button" value =" {{matchUp.homeTeamName}}, {{spread}}, {{matchUp.homeTeamSpread}}"  #hulkSmash (click)="toggleBet(hulkSmash.value)" class="btn btn-outline-success col">{{matchUp.homeTeamSpread}}</button>
+            <button type="button" value =" {{matchUp.homeTeamName}}, {{moneyLine}}, {{matchUp.homeTeamMoneyLine}}"  #smushSmush (click)="toggleBet(smushSmush.value)" class="btn btn-outline-success col">{{matchUp.homeTeamMoneyLine}}</button>
+            <button type="button" value ="{{matchUp.totalU}}, {{matchUp.homeTeamName}}, {{total}}"  #smasher (click)="toggleBet(smasher.value)" class="btn btn-outline-success col">{{matchUp.totalU}}</button>
+        </div>
+    <ng-container *ngFor = 'let limboBet of limboBets'>
+      <div class = "border-for-bets" *ngIf='limboBets' >
+          <div class="row top-border">
+            <div class="col top-line-bet">
+                <div class = "bold">{{limboBet.bet}}</div>
+                <div class = "sub-header">{{limboBet.typeOfBet}}</div>
+            </div>
+            <div class="col right-align-text">
+                {{limboBet.odds}} <i (click) = "removeBet()"class="fa fa-times-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col match-up">{{fullMatchUp}}</div>
+          </div>
+          <div class="row">
+              <div class="col">
+                  <input type="text" placeholder={{inputBet}} >
+              </div>
+              <div class="col right-align-text">
+                  <input type="text" placeholder={{outPutBet}} class="col rightAlignText">
+              </div>
+          </div>
+    
+      </div>
+    </ng-container>
   </div>
+
   <div class="modal-footer">
       <button type="button" class="btn btn-outline-primary" (click)="activeModal.close('Close click')">Close</button>
       <button type="button" class="btn btn-outline-primary" (click)="EnterBet()">Enter Bet</button>

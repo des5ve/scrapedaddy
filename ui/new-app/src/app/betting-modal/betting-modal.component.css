@@ -1,7 +1,27 @@
-.dark-modal .modal-content {
-    background-color: #292b2c;
-    color: white;
-  }
-  .dark-modal .close {
-    color: white;   
-  }
+.big-dad{
+  max-width: 500px;
+}
+ .border-for-bets{
+  margin: 0px;
+  padding-bottom: 5px;
+}
+.top-border{
+  border-top-style: groove;
+}
+.sub-header{
+  font-size: 80%;
+}
+.match-up{
+  font-size: 70%;
+  color: blue;
+}
+.top-line-bet{
+  padding-bottom: 20px;
+}
+.bold{
+  font-weight: bold;
+}
+.right-align-text{
+  text-align: right;
+  padding-right: 0px;
+}
