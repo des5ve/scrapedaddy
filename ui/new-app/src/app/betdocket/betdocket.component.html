@@ -7,7 +7,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let game of games">
+    <tr *ngFor="let game of games" class="games" [style.color]="isWinning ? 'green' : 'red'">
       <td class = "league">{{game.league}}</td>
       <td class = "matchup">{{game.matchup}}</td>
       <td class = "wager">{{game.wager}}</td>
@@ -15,4 +15,5 @@
   </tbody>
 </table>
 
+<!--[style.color]="isWinning ? 'green' : 'red'"-->
 
