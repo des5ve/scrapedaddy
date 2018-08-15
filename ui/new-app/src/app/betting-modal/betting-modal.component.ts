@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap/modal/modal-ref';
+import { LimboBet } from '../models/LimboBet';
 
 
 @Component({
@@ -34,21 +35,7 @@ export class BettingModalComponent {
   spread: string = "Spread";
   total: string = "Total";
   
-  limboBets: any[] =[
-    {
-      "bet": "New York Giants",
-      "typeOfBet": "Spread",
-      "odds": "+6.5 (-115)",
-
-    },
-    {
-      "bet": "Over 49",
-      "typeOfBet": "Total",
-      "odds": "-110",
-
-    }
-   
-  ];
+  limboBets: LimboBet[] = [];
   
   
   closeResult: string;
@@ -57,12 +44,20 @@ export class BettingModalComponent {
 
   toggleBet(value: string){
     this.showPlus = !this.showPlus;
-    console.log(value.split(","));
+    const input = value.split(",");
+    const limboBet = new LimboBet();
+    limboBet.bet = input[0];
+    limboBet.typeOfBet = input[1];
+    limboBet.odds = input[2];
+    this.limboBets.push(limboBet);
+    console.log(limboBet);
     //Need to be able to add this array as an object to the above array
   }
 
-  removeBet(): void{
-    //code to remove an object from the array of bets
+  removeBet(indexOf: number): void{
+    console.log(indexOf);
+    this.limboBets.splice(indexOf, 1);
+    console.log(this.limboBets);
   }
   
   determineIsWinning(a, b, c): void{

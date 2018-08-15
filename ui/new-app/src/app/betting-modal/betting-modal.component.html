@@ -32,7 +32,7 @@
             <button type="button" value =" {{matchUp.homeTeamName}}, {{moneyLine}}, {{matchUp.homeTeamMoneyLine}}"  #smushSmush (click)="toggleBet(smushSmush.value)" class="btn btn-outline-success col">{{matchUp.homeTeamMoneyLine}}</button>
             <button type="button" value ="{{matchUp.totalU}}, {{matchUp.homeTeamName}}, {{total}}"  #smasher (click)="toggleBet(smasher.value)" class="btn btn-outline-success col">{{matchUp.totalU}}</button>
         </div>
-    <ng-container *ngFor = 'let limboBet of limboBets'>
+    <ng-container *ngFor = 'let limboBet of limboBets;let i = index'>
       <div class = "border-for-bets" *ngIf='limboBets' >
           <div class="row top-border">
             <div class="col top-line-bet">
@@ -40,7 +40,7 @@
                 <div class = "sub-header">{{limboBet.typeOfBet}}</div>
             </div>
             <div class="col right-align-text">
-                {{limboBet.odds}} <i (click) = "removeBet()"class="fa fa-times-circle" aria-hidden="true"></i>
+                {{limboBet.odds}} <i (click) = "removeBet(i)"class="fa fa-times-circle" aria-hidden="true"></i>
             </div>
           </div>
           <div class="row">
@@ -51,7 +51,7 @@
                   <input type="text" placeholder={{inputBet}} >
               </div>
               <div class="col right-align-text">
-                  <input type="text" placeholder={{outPutBet}} class="col rightAlignText">
+                  <input type="text" placeholder={{outPutBet}} class="col right-align-text">
               </div>
           </div>
     
