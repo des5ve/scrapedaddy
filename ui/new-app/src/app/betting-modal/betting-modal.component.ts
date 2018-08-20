@@ -13,11 +13,10 @@ import { LimboBet } from '../models/LimboBet';
 export class BettingModalComponent {
 
   showPlus: boolean = false;
-  betPayload: string = "-290";
   inputBet: string = "Risk"; 
   outPutBet: string = "To Win"
 
-  matchUp = {"awayTeamName": "DAL",
+  bettingMatchUp = {"awayTeamName": "DAL",
   "awayTeamFullName": "Dallas Cowboys",
   "awayTeamSpread": "-6.5(-115)",
   "awayTeamMoneyLine": "-290",
@@ -30,10 +29,12 @@ export class BettingModalComponent {
   }
   //Variables to bind to created from Team Info
 
-  fullMatchUp: string = this.matchUp.awayTeamFullName + ' @ ' + this.matchUp.homeTeamFullName;
+  fullMatchUp: string = this.bettingMatchUp.awayTeamFullName + ' @ ' + this.bettingMatchUp.homeTeamFullName;
   moneyLine: string = "Moneyline";
   spread: string = "Spread";
   total: string = "Total";
+  betAmount : string = "";
+  betToWin: string = this.betAmount
   
   limboBets: LimboBet[] = [];
   
@@ -60,14 +61,7 @@ export class BettingModalComponent {
     console.log(this.limboBets);
   }
   
-  determineIsWinning(a, b, c): void{
-    if (a > b+c){
-      console.log("winner");
-    } else {
-      console.log("loser");
-  }
-}
-
+  
 
 }
 

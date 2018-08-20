@@ -1,0 +1,11 @@
+<div class="container no-right-boundary">
+<div *ngFor = 'let recentGame of recentGames' class="row">
+  <div class="col no-border min-padding">
+     <img class = "logo" [src]="recentGame.opponentLogo">
+  </div>
+  <div class="col-2 butt vertical-align">{{recentGame.location}} {{recentGame.opponentName}}</div>
+  <div class="col ass vertical-align"> {{recentGame.result}}</div>
+  <div class="col-2 no-padding wider vertical-align"> {{recentGame.score}}</div>
+</div>
+</div>
+

@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {SignInComponent} from './sign-in/sign-in.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationService } from './services/authentication.service';
+import { RecentGamesWidgetComponent } from './recent-games-widget/recent-games-widget.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { AuthenticationService } from './services/authentication.service';
     MlbScoresComponent,
     BettingModalComponent,
     SignUpComponent,
-    SignInComponent
+    SignInComponent,
+    RecentGamesWidgetComponent
   ],
   imports: [
     BrowserModule,
