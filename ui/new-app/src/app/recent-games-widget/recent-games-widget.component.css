@@ -1,6 +1,14 @@
 .no-right-boundary{
     padding-right: 0px;
 }
+.bold{
+    font-style: bold;
+}
+.sub-header{
+    font-size: 80%;
+    border-bottom: 1px solid skyblue;
+
+}
 .logo{
     max-width: 25px;
     max-height: 25px;
