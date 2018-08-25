@@ -18,14 +18,14 @@ export class BetdocketComponent implements OnInit {
     //{"gameId": 3, "league": 'NFL', "matchup": 'DAL@PHI', "wager": 'DAL 7.5'},
     //{"gameId": 4, "league": 'NBA', "matchup": 'PHX@MIA', "wager": 'o198'}
     ]
-    isWinning: boolean;
     isTotalWinning: boolean;
     isLineWinning: boolean;
+    isWinning: boolean;
   constructor() { }
 
   ngOnInit() {
   this.determineIsLineWinning(17, 21, 3.5)
-  this.determineIsTotalWinning(true, 47.5, 25, 23) 
+  this.determineIsTotalWinning(false, 47.5, 25, 23) 
   };
 
 determineIsLineWinning(teamPickedPoints: number, opponentPoints: number, line: number): void{
@@ -50,11 +50,18 @@ determineIsTotalWinning(over:boolean, scoreTotal:number, homeTeamPoints:number, 
       this.isTotalWinning=false//loser
     }
     };
+  };
 
-    
-    if (this.isTotalWinning=true) {this.isWinning=true}
-    else if (this.isLineWinning=true) {this.isWinning=true}
-    else {this.isWinning= false}
+  determineIsBetWinning(isTotalWinning: boolean, isLineWinning: boolean, isWinning: boolean): void{
+    if (this.isTotalWinning=true) {
+      this.isWinning=true
+    }
+    else if (this.isLineWinning=true) {
+      this.isWinning=true
+    }
+    else {
+      this.isWinning= false
+    }
 }; 
 }
 
