@@ -1,0 +1,51 @@
+<div class="cfb-scores">
+  <table *ngFor="let score of scores" class="table table-sm borderless scoreboard">
+    <thead>
+    <tr>
+      <th class = "game-status" scope="col" colspan="3">{{score.gameStatus}}</th>
+      <th scope="col">1</th>
+      <th scope="col">2</th>
+      <th scope="col">3</th>
+      <th scope="col">4</th>
+      <th scope="col">T</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class = "away">
+      <td colspan = "1"class = "image">
+        <img class = "logo" src="http://prod.static.giants.clubs.nfl.com/nfl-assets/img/gbl-ico-team/NYG/logos/home/large.png"/>
+      </td>
+      <td colspan = "2">
+        <div class="team-info">
+          <div class ="team-name">{{score.awayTeam}} </div>
+          <div class = "team-record"> ({{score.awayWins}}-{{score.awayLosses}})</div>
+        </div>
+        <div class="place-bet-icon">
+            <i class="fa fa-pencil-square-o fa-lg" (click)="open()" aria-hidden="true"></i>
+        </div>
+      </td>
+      <td class = "quarter">{{score.awayq1Score}}</td>
+      <td class = "quarter">{{score.awayq2Score}}</td>
+      <td class = "quarter">{{score.awayq3Score}}</td>
+      <td class = "quarter">{{score.awayq4Score}}</td>
+      <td class = "final">{{score.awayScore}}</td>
+    </tr>
+    <tr class = "home">
+      <td colspan = "1"class = "image">
+        <img class="logo" src="http://jonvilma.com/images/atlanta-falcons--1.jpg" >
+      </td>
+      <td colspan = "2">
+        <div class="team-info">
+          <div class ="team-name">{{score.homeTeam}} </div>
+          <div class = "team-record"> ({{score.homeWins}}-{{score.homeLosses}})</div>
+        </div>
+      </td>
+      <td class = "quarter">{{score.homeq1Score}}</td>
+      <td class = "quarter">{{score.homeq2Score}}</td>
+      <td class = "quarter">{{score.homeq3Score}}</td>
+      <td class = "quarter">{{score.homeq4Score}}</td>
+      <td class = "final">{{score.homeScore}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

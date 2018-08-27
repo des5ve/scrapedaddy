@@ -20,6 +20,7 @@ import { NhlScoresComponent } from './nhl-scores/nhl-scores.component';
 import { BetdocketComponent } from './betdocket/betdocket.component';
 import { GolfScoresComponent } from './golf-scores/golf-scores.component';
 import { WagersComponent } from './wagers/wagers.component';
+import { CfbScoresComponent } from './cfb-scores/cfb-scores.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { WagersComponent } from './wagers/wagers.component';
     BetdocketComponent,
     GolfScoresComponent,
     WagersComponent,
+    CfbScoresComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,7 @@ import { WagersComponent } from './wagers/wagers.component';
         {path: 'mlb-scores', component: MlbScoresComponent},
         {path: 'nhl-scores', component: NhlScoresComponent},
         {path: 'golf-scores', component: GolfScoresComponent},
+        {path: 'cfb-scores', component: CfbScoresComponent},
         {path: 'wagers', component: WagersComponent},
         {path: '', redirectTo: 'nfl-scores', pathMatch: 'full'}
     ]),

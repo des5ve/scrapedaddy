@@ -6,6 +6,7 @@ import { NBAScore } from "../models/NBAScore";
 import { NHLScore } from "../models/NHLScore";
 import { MLBScore } from "../models/MLBScore";
 import { GolfScore } from "../models/GolfScore";
+import { CFBScore } from "../models/CFBScore";
 import { BettingModalComponent } from "../betting-modal/betting-modal.component";
 
 @Component({

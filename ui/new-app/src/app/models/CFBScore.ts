@@ -1,0 +1,23 @@
+export class CFBScore{
+    public gameId: number;
+    public homeTeam: string;
+    public homeScore: number;
+    public homeq1Score: number;
+    public homeq2Score: number;
+    public homeq3Score: number;
+    public homeq4Score: number;
+    public homeWins: number;
+    public homeLosses: number;
+    public awayTeam: string;
+    public awayScore: number;
+    public awayq1Score: number;
+    public awayq2Score: number;
+    public awayq3Score: number;
+    public awayq4Score: number;
+    public awayWins: number;
+    public awayLosses: number;
+    public gameStatus: string;
+    public currentQuarter: number;
+    public currentTime: string;
+    public gameTime: string; 
+}

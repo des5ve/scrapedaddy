@@ -1,0 +1,62 @@
+table{
+    font-family: 'Bungee Inline';
+    border: 1px solid white;
+    width: 300px;
+    text-align: center;
+    background-color: black;
+    color:white;
+  }
+  
+  .quarter{
+    color: greenyellow;
+    vertical-align: middle;
+    width: 45px;
+  }
+  .final{
+    vertical-align: middle;
+    width: 45px;
+  }
+  .team-record{
+    color: greenyellow;
+    text-align: left;
+    font-size: 10px
+  }
+  .team-name{
+    color:mediumvioletred;
+    text-align: left;
+  
+  }
+  .borderless td, .borderless th {
+    border: none;
+  }
+  
+  .logo{
+    max-width: 35px;
+    max-height: 35px;
+    margin: 5px;
+    
+  }
+  
+  .game-status{
+    min-width: 184px;
+    text-align: left;
+  }
+  .team-info{
+    margin-bottom: 3px;
+    float: left;
+  }
+  .image{
+    padding: 0px;
+    width: 45px;
+  }
+  .scoreboard{
+    display: inline-block
+  }
+  .nfl-scores{
+    margin: 0 auto;
+    display: table;
+  }
+  .place-bet-icon{
+    float: right;
+    margin-top: 10px;
+  }
