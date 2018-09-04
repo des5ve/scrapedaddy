@@ -17,6 +17,11 @@ import {SignInComponent} from './sign-in/sign-in.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationService } from './services/authentication.service';
 import { RecentGamesWidgetComponent } from './recent-games-widget/recent-games-widget.component';
+import { NhlScoresComponent } from './nhl-scores/nhl-scores.component';
+import { BetdocketComponent } from './betdocket/betdocket.component';
+import { GolfScoresComponent } from './golf-scores/golf-scores.component';
+import { WagersComponent } from './wagers/wagers.component';
+import { CfbScoresComponent } from './cfb-scores/cfb-scores.component';
 
 
 @NgModule({
@@ -26,10 +31,15 @@ import { RecentGamesWidgetComponent } from './recent-games-widget/recent-games-w
     NflScoresComponent,
     NbaScoresComponent,
     MlbScoresComponent,
+    NhlScoresComponent,
     BettingModalComponent,
     SignUpComponent,
     SignInComponent,
-    RecentGamesWidgetComponent
+    RecentGamesWidgetComponent,
+    BetdocketComponent,
+    GolfScoresComponent,
+    WagersComponent,
+    CfbScoresComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +50,10 @@ import { RecentGamesWidgetComponent } from './recent-games-widget/recent-games-w
         {path: 'nfl-scores', component: NflScoresComponent},
         {path: 'nba-scores', component: NbaScoresComponent},
         {path: 'mlb-scores', component: MlbScoresComponent},
+        {path: 'nhl-scores', component: NhlScoresComponent},
+        {path: 'golf-scores', component: GolfScoresComponent},
+        {path: 'cfb-scores', component: CfbScoresComponent},
+        {path: 'wagers', component: WagersComponent},
         {path: '', redirectTo: 'nfl-scores', pathMatch: 'full'}
     ]),
     NgbModule.forRoot()

@@ -1,0 +1,33 @@
+table{
+    font-family: 'Bungee Inline';
+    border: 1px solid white;
+    width: 900px;
+    text-align: center;
+    background-color: black;
+    color:white;
+  }
+
+.hole{
+    color: greenyellow;
+    vertical-align: middle;
+    width: 45px;
+  }  
+
+.total{
+    vertical-align: middle;
+    width: 45px;
+  }  
+.borderless td, .borderless th {
+    border: none;
+  }
+.scoreboard{
+    display: inline-block
+  }  
+.place-bet-icon{
+    float: right;
+    margin-top: 10px;
+  }  
+.golf-scores{
+    margin: 0 auto;
+    display: table;
+}  
