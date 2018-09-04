@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {SignInComponent} from './sign-in/sign-in.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationService } from './services/authentication.service';
+import { RecentGamesWidgetComponent } from './recent-games-widget/recent-games-widget.component';
 import { NhlScoresComponent } from './nhl-scores/nhl-scores.component';
 import { BetdocketComponent } from './betdocket/betdocket.component';
 import { GolfScoresComponent } from './golf-scores/golf-scores.component';
@@ -34,6 +35,7 @@ import { CfbScoresComponent } from './cfb-scores/cfb-scores.component';
     BettingModalComponent,
     SignUpComponent,
     SignInComponent,
+    RecentGamesWidgetComponent,
     BetdocketComponent,
     GolfScoresComponent,
     WagersComponent,

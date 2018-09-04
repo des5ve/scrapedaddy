@@ -1,7 +1,37 @@
-.dark-modal .modal-content {
-    background-color: #292b2c;
-    color: white;
-  }
-  .dark-modal .close {
-    color: white;   
-  }
+.left{
+  max-width: 200px;
+  margin: 0px;
+  padding: 0px;
+}
+.parent-container{
+  display: flex;
+}
+.background{
+  background-color: aquamarine;
+}
+.big-dad{
+  max-width: 420px;
+  margin: 0px;
+}
+ .border-for-bets{
+  margin: 0px;
+  padding-bottom: 5px;
+}
+
+.sub-header{
+  font-size: 80%;
+}
+.match-up{
+  font-size: 70%;
+  color: blue;
+}
+.top-line-bet{
+  padding-bottom: 20px;
+}
+.bold{
+  font-weight: bold;
+}
+.right-align-text{
+  text-align: right;
+  padding-right: 0px;
+}

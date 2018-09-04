@@ -1,0 +1,42 @@
+.no-right-boundary{
+    padding-right: 0px;
+}
+.bold{
+    font-style: bold;
+}
+.sub-header{
+    font-size: 80%;
+    border-bottom: 1px solid skyblue;
+
+}
+.logo{
+    max-width: 25px;
+    max-height: 25px;
+}
+.no-border{
+    border: 0px;
+    max-width: 35px;
+}
+.min-padding{
+    padding: 6px;
+}
+.butt{
+    min-width: 70px;
+    padding: 0px;
+   
+}
+.ass{
+    padding-left: 5px;
+    padding-right: 0px;
+    max-width: 25px;
+}
+.no-padding{
+    padding: 0px;
+    
+}
+.wider{
+    min-width: 60px;
+}
+.vertical-align{
+    margin: auto;
+}
