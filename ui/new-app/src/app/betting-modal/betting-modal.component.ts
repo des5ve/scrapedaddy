@@ -34,7 +34,8 @@ export class BettingModalComponent {
   spread: string = "Spread";
   total: string = "Total";
   betAmount : string = "";
-  betToWin: string = this.betAmount
+  betToWin: string = this.betAmount;
+  value: string = 'To win';
   
   limboBets: LimboBet[] = [];
   
@@ -61,6 +62,9 @@ export class BettingModalComponent {
     console.log(this.limboBets);
   }
   
+  onKey(value: string) {
+    this.value =value;
+  }
   
 
 }
