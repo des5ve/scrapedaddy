@@ -53,10 +53,10 @@
           </div>
           <div class="row">
               <div class="col">
-                  <input type="text" #box (keyup)="onKey(box.value)" placeholder={{inputBet}} [(ngModel)] = 'betAmount' >
+                  <input type="text" #box (keyup)="onKey(limboBet)" placeholder={{limboBet.risk}} [(ngModel)] = 'betAmount' >
               </div>
               <div class="col right-align-text">
-                  <input type="text" placeholder={{value}} class="col right-align-text">
+                  <input type="text" placeholder={{limboBet.toWin}} class="col right-align-text">
               </div>
           </div>
     

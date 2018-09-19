@@ -4,4 +4,7 @@ export class LimboBet{
     public bet?: string;
     public typeOfBet?: string;
     public odds?: string;
+    public risk?: any;
+    public toWin: any;
+
 }

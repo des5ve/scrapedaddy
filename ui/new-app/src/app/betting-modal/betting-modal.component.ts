@@ -37,6 +37,7 @@ export class BettingModalComponent {
   total: string = "Total";
   betAmount : string = "";
   betToWin: string = this.betAmount;
+  // Does this value need to be an array??
   value: string = 'To win';
   awaySpreadOdds: string = this.bettingMatchUp.awayTeamSpreadOdds;
   
@@ -68,6 +69,8 @@ export class BettingModalComponent {
     limboBet.bet = input[0];
     limboBet.typeOfBet = input[1];
     limboBet.odds = input[2];
+    limboBet.risk = "risk";
+
     this.limboBets.push(limboBet);
     console.log(limboBet);
     //Need to be able to add this array as an object to the above array
@@ -79,8 +82,9 @@ export class BettingModalComponent {
     console.log(this.limboBets);
   }
   //Conversion from user bet input to output
-  onKey(value: string) {
-    this.value =value;
+  onKey(limboBet: any) {
+    console.log(limboBet.risk);
+    limboBet.toWin =limboBet.risk;
   }
   
 
