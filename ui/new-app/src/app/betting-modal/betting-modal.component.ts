@@ -19,11 +19,13 @@ export class BettingModalComponent {
   bettingMatchUp = {"awayTeamName": "DAL",
   "awayTeamFullName": "Dallas Cowboys",
   "awayTeamSpread": "-6.5(-115)",
+  "awayTeamSpreadOdds": "-115",
   "awayTeamMoneyLine": "-290",
   "totalO": "O48.5 (-110)",
   "homeTeamName": "NYG",
   "homeTeamFullName":"New York Giants",
   "homeTeamSpread": "+6.5(-115)",
+  "homeTeamSpreadOdds": "-115",
   "homeTeamMoneyLine": "+270",
   "totalU": "U48.5 (-110)"
   }
@@ -36,6 +38,7 @@ export class BettingModalComponent {
   betAmount : string = "";
   betToWin: string = this.betAmount;
   value: string = 'To win';
+  awaySpreadOdds: string = this.bettingMatchUp.awayTeamSpreadOdds;
   
   limboBets: LimboBet[] = [];
   
@@ -44,6 +47,20 @@ export class BettingModalComponent {
 
   constructor(public activeModal: NgbActiveModal) { }
 
+//Functions for Moneyline Mulitpliers
+  conversion(awaySpreadOdds){
+   if(awaySpreadOdds.charAt(0) == "-"){
+     console.log("-") ;
+    }
+    else{
+      console.log("no -")
+    }
+   }; 
+
+
+
+
+  //User Interactions
   toggleBet(value: string){
     this.showPlus = !this.showPlus;
     const input = value.split(",");
@@ -61,7 +78,7 @@ export class BettingModalComponent {
     this.limboBets.splice(indexOf, 1);
     console.log(this.limboBets);
   }
-  
+  //Conversion from user bet input to output
   onKey(value: string) {
     this.value =value;
   }
