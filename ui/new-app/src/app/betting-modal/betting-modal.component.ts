@@ -29,64 +29,53 @@ export class BettingModalComponent {
   "homeTeamMoneyLine": "+270",
   "totalU": "U48.5 (-110)"
   }
-  //Variables to bind to created from Team Info
+  // Variables to bind to created from Team Info
 
   fullMatchUp: string = this.bettingMatchUp.awayTeamFullName + ' @ ' + this.bettingMatchUp.homeTeamFullName;
-  moneyLine: string = "Moneyline";
-  spread: string = "Spread";
-  total: string = "Total";
-  betAmount : string = "";
-  betToWin: string = this.betAmount;
+  moneyLine = 'Moneyline';
+  spread = 'Spread';
+  total = 'Total';
   // Does this value need to be an array??
-  value: string = 'To win';
   awaySpreadOdds: string = this.bettingMatchUp.awayTeamSpreadOdds;
-  
   limboBets: LimboBet[] = [];
-  
-  
   closeResult: string;
 
   constructor(public activeModal: NgbActiveModal) { }
 
-//Functions for Moneyline Mulitpliers
-  conversion(awaySpreadOdds){
-   if(awaySpreadOdds.charAt(0) == "-"){
-     console.log("-") ;
+// Functions for Moneyline Mulitpliers
+  conversion(awaySpreadOdds) {
+   if(awaySpreadOdds.charAt(0) === '-') {
+     console.log('-') ;
+    }else {
+      console.log('no -');
     }
-    else{
-      console.log("no -")
-    }
-   }; 
-
-
-
-
-  //User Interactions
+   }
+   // User Interactions
   toggleBet(value: string){
     this.showPlus = !this.showPlus;
-    const input = value.split(",");
+    const input = value.split(',');
     const limboBet = new LimboBet();
     limboBet.bet = input[0];
     limboBet.typeOfBet = input[1];
     limboBet.odds = input[2];
-    limboBet.risk = "risk";
+    limboBet.risk = 'Risk';
+    limboBet.toWin = 'To Win';
 
     this.limboBets.push(limboBet);
     console.log(limboBet);
-    //Need to be able to add this array as an object to the above array
+    // Need to be able to add this array as an object to the above array
   }
-
   removeBet(indexOf: number): void{
     console.log(indexOf);
     this.limboBets.splice(indexOf, 1);
     console.log(this.limboBets);
   }
-  //Conversion from user bet input to output
-  onKey(limboBet: any) {
-    console.log(limboBet.risk);
-    limboBet.toWin =limboBet.risk;
+  // Conversion from user bet input to output
+  onKey(value: string[]) {
+    const index = parseInt(value[1], 10);
+    const betValue = parseInt(value[0], 10);
+    this.limboBets[index].risk = betValue;
+    this.limboBets[index].toWin = this.limboBets[index].risk * 10;
   }
-  
-
 }
 

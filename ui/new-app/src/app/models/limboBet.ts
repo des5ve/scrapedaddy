@@ -5,6 +5,6 @@ export class LimboBet{
     public typeOfBet?: string;
     public odds?: string;
     public risk?: any;
-    public toWin: any;
+    public toWin?: any;
 
 }
