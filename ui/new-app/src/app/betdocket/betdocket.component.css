@@ -1,20 +1,20 @@
 .table{
-    width: 300px;
+    width: 0px;
     min-height: 300px;
-    float: right;
     text-align: center;
     font-family: 'Bungee Inline';
     border: 1px solid white;
     color: white;
+    float: right;
   }
   
   .matchup{
-    width: 100px;
+    width: 65px;
     border: 1px solid white;
   }
   
   .wager{
-    width: 100px;
+    width: 60px;
     border: 1px solid white;
   }
   
@@ -22,3 +22,5 @@
     border: 1px solid white;
     width: 30px;
   }
+
+  

@@ -32,9 +32,16 @@
     <button type="button" class="btn btn-secondary"[routerLink]="['/wagers']">wagers</button>
   </div>
 </div>
-<div>
-<a class="twitter-timeline" data-width="220" data-height="300" data-theme="dark" href="https://twitter.com/D_schoolz?ref_src=twsrc%5Etfw">Tweets by Danny</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<router-outlet></router-outlet>
-<router-outlet></router-outlet>
-<router-outlet></router-outlet>
-<app-betdocket></app-betdocket>
+<div class="parent-container">
+  <div class="container">
+    <a class="twitter-timeline" data-width="220" data-height="300" data-theme="dark" href="https://twitter.com/D_schoolz?ref_src=twsrc%5Etfw">Tweets by Danny</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+  <div class="container">
+    <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+  </div>
+  <div class="container">
+    <app-betdocket></app-betdocket>
+  </div>
+</div>

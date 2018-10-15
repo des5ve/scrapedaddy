@@ -1,29 +1,53 @@
 <div class="golf-scores">
-  <table *ngFor="let score of scores" class="table table-sm borderless scoreboard">
+  <table  class="table table-sm borderless scoreboard">
     <thead>
-      <th scope="col">player</th>
-      <th scope="col">1</th>
-      <th scope="col">2</th>
-      <th scope="col">3</th>
-      <th scope="col">4</th>
-      <th scope="col">5</th>
-      <th scope="col">6</th>
-      <th scope="col">7</th>
-      <th scope="col">8</th>
-      <th scope="col">9</th>
-      <th scope="col">10</th>
-      <th scope="col">11</th>
-      <th scope="col">12</th>
-      <th scope="col">13</th>
-      <th scope="col">14</th>
-      <th scope="col">15</th>
-      <th scope="col">16</th>
-      <th scope="col">17</th>
-      <th scope="col">18</th>
-      <th scope="col">tot</th>
+      <tr class="round">
+        <th scope="col" class="player">hole</th>
+        <th scope="col" class = "header-row">1</th>
+        <th scope="col" class = "header-row">2</th>
+        <th scope="col" class = "header-row">3</th>
+        <th scope="col" class = "header-row">4</th>
+        <th scope="col" class = "header-row">5</th>
+        <th scope="col" class = "header-row">6</th>
+        <th scope="col" class = "header-row">7</th>
+        <th scope="col" class = "header-row">8</th>
+        <th scope="col" class = "header-row">9</th>
+        <th scope="col" class = "header-row">10</th>
+        <th scope="col" class = "header-row">11</th>
+        <th scope="col" class = "header-row">12</th>
+        <th scope="col" class = "header-row">13</th>
+        <th scope="col" class = "header-row">14</th>
+        <th scope="col" class = "header-row">15</th>
+        <th scope="col" class = "header-row">16</th>
+        <th scope="col" class = "header-row">17</th>
+        <th scope="col" class = "header-row">18</th>
+        <th scope="col" class="total">tot</th>
+      </tr>
+      <tr class="round">
+        <th scope="col" class="player">par</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class = "header-row">0</th>
+        <th scope="col" class="total">0</th>
+      </tr>
     </thead>
     <tbody>
-      <tr class = "round">
+      <tr class = "round" *ngFor="let score of scores">
        <td class = "player">{{score.player}}</td>
        <td class = "hole">{{score.hole1score}}</td>
        <td class = "hole">{{score.hole2score}}</td>

@@ -1,9 +1,10 @@
 table{
   font-family: 'Bungee Inline';
   border: 1px solid white;
-  width: 400px;
+  width: 300px;
   background-color: black;
   color:white;
+  margin: 0px;
 }
 
 .quarter{
@@ -52,8 +53,10 @@ table{
   display: inline-block
 }
 .nfl-scores{
-  margin: 0 auto;
+  margin: 0px;
   display: table;
+  float: right;
+  
 }
 .place-bet-icon{
   float: right;

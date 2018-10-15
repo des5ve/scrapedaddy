@@ -7,12 +7,39 @@ table{
     color:white;
   }
 
+thead{
+  border: 1px solid white;
+  }
+
+tbody{
+  border: 1px solid white;
+  height: 227px;
+  display: block;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+tr{
+  border: 1px solid white;
+}
+
 .hole{
     color: greenyellow;
     vertical-align: middle;
     width: 45px;
   }  
 
+.header-row{
+  color: white;
+  vertical-align: middle;
+  width: 45px;
+}  
+th.player{
+  width:132px;
+}
+td.player{
+  width:116px;
+}
 .total{
     vertical-align: middle;
     width: 45px;
@@ -21,7 +48,7 @@ table{
     border: none;
   }
 .scoreboard{
-    display: inline-block
+    display: block;
   }  
 .place-bet-icon{
     float: right;
@@ -29,5 +56,5 @@ table{
   }  
 .golf-scores{
     margin: 0 auto;
-    display: table;
+    display: block;
 }  
