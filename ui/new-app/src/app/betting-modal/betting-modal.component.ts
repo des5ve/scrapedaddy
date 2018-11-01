@@ -72,6 +72,7 @@ export class BettingModalComponent {
   }
   // Conversion from user bet input to output
   onKey(value: string[]) {
+    console.log(value);
     const index = parseInt(value[1], 10);
     const betValue = parseInt(value[0], 10);
     this.limboBets[index].risk = betValue;
