@@ -1,10 +1,20 @@
+
+
 <section class="bgimage">
   <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+          <a class="navbar-brand" href="#">Bet Track</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+              <app-sign-up></app-sign-up>
+            </div>
+          </div>
+        </nav>
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <h5>Hello, world! Full width Hero-unit header</h5>
-        <app-sign-up></app-sign-up>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
       </div>
     </div>
   </div>
@@ -15,10 +25,16 @@
     <button type="button" class="btn btn-secondary"[routerLink]="['/nfl-scores']">nfl</button>
     <button type="button" class="btn btn-secondary"[routerLink]="['/nba-scores']">nba</button>
     <button type="button" class="btn btn-secondary"[routerLink]="['/mlb-scores']">mlb</button>
+    <button type="button" class="btn btn-secondary"[routerLink]="['/nhl-scores']">nhl</button>
+    <button type="button" class="btn btn-secondary"[routerLink]="['/golf-scores']">golf</button>
     <button type="button" class="btn btn-secondary"[routerLink]="['/mlb-scores']">fav</button>
-    <button type="button" class="btn btn-secondary"[routerLink]="['/mlb-scores']">wagers</button>
+    <button type="button" class="btn btn-secondary"[routerLink]="['/wagers']">wagers</button>
   </div>
 </div>
+<div>
+<a class="twitter-timeline" data-width="220" data-height="300" data-theme="dark" href="https://twitter.com/D_schoolz?ref_src=twsrc%5Etfw">Tweets by Danny</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<router-outlet ></router-outlet>
 <router-outlet></router-outlet>
 <router-outlet></router-outlet>
-<router-outlet></router-outlet>
+
+<app-statistics></app-statistics>

@@ -17,6 +17,7 @@ import {SignInComponent} from './sign-in/sign-in.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationService } from './services/authentication.service';
 import { RecentGamesWidgetComponent } from './recent-games-widget/recent-games-widget.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { RecentGamesWidgetComponent } from './recent-games-widget/recent-games-w
     BettingModalComponent,
     SignUpComponent,
     SignInComponent,
-    RecentGamesWidgetComponent
+    RecentGamesWidgetComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,
