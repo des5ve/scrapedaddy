@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { nflTeamStat } from '../models/nflTeamStat'
+import { NflTeamStat } from '../models/NflTeamStat'
 
 @Component({
   selector: 'app-statistics',
@@ -9,7 +9,7 @@ import { nflTeamStat } from '../models/nflTeamStat'
 export class StatisticsComponent implements OnInit {
 
   teamName: string = "Butt";
-  nflTeamStat: nflTeamStat[] = [];
+  nflTeamStat: NflTeamStat[] = [];
   
   
    // events
@@ -25,10 +25,13 @@ export class StatisticsComponent implements OnInit {
 
   switchTeam(value: string){
     this.teamName = value;
-    const nflTeamStat = new nflTeamStat();
-    nflTeamStat.radarChartLabels= ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'];
+    const newNflTeamStat = new NflTeamStat();
+    newNflTeamStat.radarChartLabels = ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'];
+    newNflTeamStat.radarChartData = {data: [65, 59, 90, 81, 56, 55, 40], label: 'Series A'};
+    newNflTeamStat.radarChartType = 'radar';
     
-
+    this.nflTeamStat.push(newNflTeamStat);
+    console.log(newNflTeamStat);
   };
 
   ngOnInit() {
