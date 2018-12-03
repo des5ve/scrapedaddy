@@ -18,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationService } from './services/authentication.service';
 import { RecentGamesWidgetComponent } from './recent-games-widget/recent-games-widget.component';
 import { StatisticsComponent } from './statistics/statistics.component';
-
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -37,6 +37,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    ChartsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
         {path: 'nfl-scores', component: NflScoresComponent},

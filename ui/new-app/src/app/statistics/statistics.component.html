@@ -1,12 +1,20 @@
 <div class="container">
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Team
+    {{teamName}}
   </button>
   <div class="dropdown-menu dropdown-menu-right">
-    <button class="dropdown-item" type="button">Giants</button>
-    <button class="dropdown-item" type="button">Falcons</button>
+    <button class="dropdown-item" type="button" value = "Giants" #load (click)="switchTeam(load.value)" >Giants</button>
+    <button class="dropdown-item" type="button" value = "Falcons" #load1 (click)="switchTeam(load1.value)" >Falcons</button>
     <button class="dropdown-item" type="button">Cowboys</button>
   </div>
+</div>
+<div style="display: block">
+  <canvas baseChart
+          [datasets]="radarChartData"
+          [labels]="radarChartLabels"
+          [chartType]="radarChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
 </div>
 </div>
