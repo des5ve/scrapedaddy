@@ -13,6 +13,7 @@
   background-size:cover;
   background-attachment: fixed;
 }
+
 .bgimage h5 {
   color:white;
   text-shadow:2px 2px #333;
@@ -31,8 +32,4 @@
 
 body{
   background-color: #000000;
-}
-
-.navbar-brand{
-  font-family: 'Bungee Inline';
 }

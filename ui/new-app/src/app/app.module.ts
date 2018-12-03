@@ -20,6 +20,7 @@ import { RecentGamesWidgetComponent } from './recent-games-widget/recent-games-w
 import { StatisticsComponent } from './statistics/statistics.component';
 import { ChartsModule } from 'ng2-charts';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ScoreboardPickerComponent } from './scoreboard-picker/scoreboard-picker.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     SignInComponent,
     RecentGamesWidgetComponent,
     StatisticsComponent,
-    NavBarComponent
+    NavBarComponent,
+    ScoreboardPickerComponent
   ],
   imports: [
     BrowserModule,

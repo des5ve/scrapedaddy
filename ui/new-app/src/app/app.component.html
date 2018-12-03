@@ -4,21 +4,6 @@
   <app-nav-bar></app-nav-bar>
 </section>
 <!-- Scoreboard building -->
-<div class="scoreboard-picker">
-  <div class="btn-group" role="group" aria-label="Basic example">
-    <button type="button" class="btn btn-secondary"[routerLink]="['/nfl-scores']">nfl</button>
-    <button type="button" class="btn btn-secondary"[routerLink]="['/nba-scores']">nba</button>
-    <button type="button" class="btn btn-secondary"[routerLink]="['/mlb-scores']">mlb</button>
-    <button type="button" class="btn btn-secondary"[routerLink]="['/nhl-scores']">nhl</button>
-    <button type="button" class="btn btn-secondary"[routerLink]="['/golf-scores']">golf</button>
-    <button type="button" class="btn btn-secondary"[routerLink]="['/mlb-scores']">fav</button>
-    <button type="button" class="btn btn-secondary"[routerLink]="['/wagers']">wagers</button>
-  </div>
-</div>
-<div>
+<app-scoreboard-picker></app-scoreboard-picker>
 <a class="twitter-timeline" data-width="220" data-height="300" data-theme="dark" href="https://twitter.com/D_schoolz?ref_src=twsrc%5Etfw">Tweets by Danny</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<router-outlet ></router-outlet>
-<router-outlet></router-outlet>
-<router-outlet></router-outlet>
-
 <app-statistics></app-statistics>
