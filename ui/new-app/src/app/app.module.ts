@@ -21,6 +21,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { ChartsModule } from 'ng2-charts';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ScoreboardPickerComponent } from './scoreboard-picker/scoreboard-picker.component';
+import { TwitterWidgetComponent } from './twitter-widget/twitter-widget.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ScoreboardPickerComponent } from './scoreboard-picker/scoreboard-picker
     RecentGamesWidgetComponent,
     StatisticsComponent,
     NavBarComponent,
-    ScoreboardPickerComponent
+    ScoreboardPickerComponent,
+    TwitterWidgetComponent
   ],
   imports: [
     BrowserModule,
