@@ -19,6 +19,7 @@ import { AuthenticationService } from './services/authentication.service';
 import { RecentGamesWidgetComponent } from './recent-games-widget/recent-games-widget.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { ChartsModule } from 'ng2-charts';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ChartsModule } from 'ng2-charts';
     SignUpComponent,
     SignInComponent,
     RecentGamesWidgetComponent,
-    StatisticsComponent
+    StatisticsComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
