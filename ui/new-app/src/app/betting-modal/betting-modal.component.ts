@@ -32,9 +32,9 @@ export class BettingModalComponent {
   // Variables to bind to created from Team Info
 
   fullMatchUp: string = this.bettingMatchUp.awayTeamFullName + ' @ ' + this.bettingMatchUp.homeTeamFullName;
-  moneyLine = 'Moneyline';
-  spread = 'Spread';
-  total = 'Total';
+  moneyLine: string = 'Moneyline';
+  spread: string = 'Spread';
+  total: string = 'Total';
   // Does this value need to be an array??
   awaySpreadOdds: string = this.bettingMatchUp.awayTeamSpreadOdds;
   limboBets: LimboBet[] = [];
