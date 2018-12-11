@@ -30,6 +30,6 @@
   display: table;
 }
 
-body{
-  background-color: #000000;
+.bg-black{
+  background-color: black;
 }

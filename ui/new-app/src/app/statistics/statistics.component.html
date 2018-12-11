@@ -11,9 +11,9 @@
 </div>
 <div style="display: block">
   <canvas baseChart
-          datasets={{nflTeamStat.radarChartData}}
-          labels={{nflTeamStat.radarChartLabels}}
-          chartType={{nflTeamStat.radarChartType}}
+          [datasets]="radarChartData"
+          [labels]="radarChartLabels"
+          [chartType]="radarChartType"
           (chartHover)="chartHovered($event)"
           (chartClick)="chartClicked($event)"></canvas>
 </div>
