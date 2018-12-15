@@ -8,12 +8,21 @@ import { NflTeamStat } from '../models/NflTeamStat';
 })
 export class StatisticsComponent {
 
-  teamName: string = "Butt";
+  teamName: string = "Team";
   nflTeamStat: NflTeamStat[] = [];
+  leagueList: Array<any> = [
+    {name: 'NFL', teams: ['Giants', 'Falcons', 'Cowboys']},
+    {name: 'NBA', teams: ['Knicks', 'Hornets', 'Warriors']},
+    {name: 'MLB', teams: ['Yankees', 'Braves', 'Red Sox']}
+  ];
+  teams: Array<any>;
+  changeTeam(count){
+    this.teams = this.leagueList.find(con => con.name == count).teams;
+  }
   
   
   // Radar
-  public radarChartLabels:string[] = ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'];
+  public radarChartLabels:string[] = ['YPP', 'YPPA', 'YPRA', 'YPPA', 'YPRPA', 'YPRAA', 'YPA'];
 
   public radarChartData:any = [
     {data: [Math.floor((Math.random() * 100) + 1), 
@@ -46,20 +55,11 @@ export class StatisticsComponent {
   constructor() { }
 
   switchTeam(value: string) {
-    const barChartOptions = {
-      title: {
-        text: value,
-        display: true
-      }
-    };
 
     this.teamName = value;
-    const newNflTeamStat = new NflTeamStat();
-    newNflTeamStat.radarChartLabels = ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'];
-    newNflTeamStat.radarChartData = {data: [65, 59, 90, 81, 56, 55, 40], label: 'Series A'};
-    newNflTeamStat.radarChartType = 'radar';
-    this.nflTeamStat.push(newNflTeamStat);
-    console.log(newNflTeamStat);
-    console.log(this.nflTeamStat);
+    console.log(value);
+    //Request API
+    this.radarChartData = [{data: [65, 59, 90, 81, 56, 55, 40], label: 'Series A'}, {data: [25, 19, 30, 31, 96, 95, 70], label: 'Series B'}];
+
   }
 }
