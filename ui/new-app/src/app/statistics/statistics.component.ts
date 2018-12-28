@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NflTeamStat } from '../models/NflTeamStat';
+import { ScoresService } from '../services/scores.service';
 
 @Component({
   selector: 'app-statistics',
@@ -9,16 +10,20 @@ import { NflTeamStat } from '../models/NflTeamStat';
 export class StatisticsComponent {
 
   teamName: string = "Team";
+  
   nflTeamStat: NflTeamStat[] = [];
+  
   leagueList: Array<any> = [
     {name: 'NFL', teams: ['Giants', 'Falcons', 'Cowboys']},
     {name: 'NBA', teams: ['Knicks', 'Hornets', 'Warriors']},
     {name: 'MLB', teams: ['Yankees', 'Braves', 'Red Sox']}
   ];
+  
   teams: Array<any>;
-  changeTeam(count){
-    this.teams = this.leagueList.find(con => con.name == count).teams;
-  }
+
+  stats: any;
+
+  constructor(private scoresService: ScoresService) { }
   
   
   // Radar
@@ -52,14 +57,47 @@ export class StatisticsComponent {
     console.log(e);
   }
 
-  constructor() { }
-
   switchTeam(value: string) {
 
     this.teamName = value;
     console.log(value);
     //Request API
-    this.radarChartData = [{data: [65, 59, 90, 81, 56, 55, 40], label: 'Series A'}, {data: [25, 19, 30, 31, 96, 95, 70], label: 'Series B'}];
+    this.radarChartData = [
+      {data: 
+        [
+          Math.floor((Math.random() * 100) + 1), 
+          Math.floor((Math.random() * 100) + 1), 
+          Math.floor((Math.random() * 100) + 1), 
+          Math.floor((Math.random() * 100) + 1),
+          Math.floor((Math.random() * 100) + 1), 
+          Math.floor((Math.random() * 100) + 1),
+          Math.floor((Math.random() * 100) + 1)], label: 'Series A'}, 
+      {data: 
+        [
+          Math.floor((Math.random() * 100) + 1), 
+          Math.floor((Math.random() * 100) + 1), 
+          Math.floor((Math.random() * 100) + 1), 
+          Math.floor((Math.random() * 100) + 1),
+          Math.floor((Math.random() * 100) + 1), 
+          Math.floor((Math.random() * 100) + 1),
+          Math.floor((Math.random() * 100) + 1)], label: 'Series B'}
+    ];
+  }
 
+  private getStats(): void{
+    this.scoresService.getGraphStats().subscribe(stats => {
+      this.setStats(stats)}, (error => {
+      console.error(error);
+    }));
+  }
+
+  private setStats(stats: any): void{
+    console.log(stats);
+    this.stats = stats;
+  }
+
+  changeTeam(count){
+    console.log(count);
+    this.teams = this.leagueList.find(con => con.name == count).teams;
   }
 }

@@ -1,4 +1,4 @@
-<div  title="Please select the country that the customer will primarily be served from">
+<!-- <div  title="Please select the country that the customer will primarily be served from">
     <select placeholder="Phantasyland" (change)="changeTeam($event.target.value)">
         <option *ngFor ="let count of leagueList">{{count.name}} </option>
     </select>
@@ -9,31 +9,37 @@
     <select placeholder="Anycity">
         <option *ngFor ="let team of teams">{{team}} </option>
   </select>
-</div>
+</div> -->
 
 <div class="container">
-  <div class="btn-group">
-      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          League
-      </button>
-      <div class="dropdown-menu dropdown-menu-right">
-        <button class="dropdown-item" type="button" *ngFor ="let count of leagueList" >{{count.name}} </button>
+  <div  class="btn-toolbar" role="toolbar" aria-label="Buttons for selecting league and team">
+    <div class="btn-group" role="group">
+      <div class="dropdown league-menu">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="league-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            League
+          </button>
+          <div class="dropdown-menu" aria-labelledby="league-menu">
+              <button class="dropdown-item" type="button" *ngFor ="let count of leagueList" value="{{count.name}}" (click)="changeTeam($event.target.value)">{{count.name}} </button>
+          </div>
       </div>
-    </div> 
-  <div class="btn-group">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      {{teamName}}
-    </button>
-    <div class="dropdown-menu dropdown-menu-right">
-      <button class="dropdown-item" type="button" value = "Giants" #load (click)="switchTeam(load.value)" >Giants</button>
+    </div>
+    <div class="btn-group" role="group">
+      <div class="dropdown team-menu">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="team-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Team
+          </button>
+          <div class="dropdown-menu" aria-labelledby="team-menu">
+              <button class="dropdown-item" type="button" *ngFor ="let team of teams" value="{{team}}" (click)="switchTeam($event.target.value)">{{team}} </button>
+          </div>
+      </div>
     </div>
   </div>
-<div style="display: block">
-  <canvas baseChart
-          [datasets]="radarChartData"
-          [labels]="radarChartLabels"
-          [chartType]="radarChartType"
-          (chartHover)="chartHovered($event)"
-          (chartClick)="chartClicked($event)"></canvas>
-</div>
+  <div style="display: block">
+    <canvas baseChart
+            [datasets]="radarChartData"
+            [labels]="radarChartLabels"
+            [chartType]="radarChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+  </div>
 </div>

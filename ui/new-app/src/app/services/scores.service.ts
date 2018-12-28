@@ -8,12 +8,14 @@ import {NFLScore} from "../models/NFLScore";
 import {NBAScore} from "../models/NBAScore";
 import {MLBScore} from "../models/MLBScore";
 import { HttpClient } from '@angular/common/http';
+import { Observer } from 'rxjs/Observer';
 
 
 export interface iScoreService{
   getNFLScores(): Observable<NFLScore[]>;
   getNBAScores(): Observable<NBAScore[]>;
   getMLBScores(): Observable<MLBScore[]>;
+  getGraphStats(): Observable<any>;
 }
 
 @Injectable()
@@ -61,6 +63,23 @@ export class ScoresService implements iScoreService{
       currentStrikes: 0}
   ]
 
+  graph_data: any = [
+    {data: [Math.floor((Math.random() * 100) + 1), 
+            Math.floor((Math.random() * 100) + 1), 
+            Math.floor((Math.random() * 100) + 1), 
+            Math.floor((Math.random() * 100) + 1),
+            Math.floor((Math.random() * 100) + 1), 
+            Math.floor((Math.random() * 100) + 1),
+            Math.floor((Math.random() * 100) + 1)], label: 'Series A'},
+    {data: [Math.floor((Math.random() * 100) + 1), 
+            Math.floor((Math.random() * 100) + 1), 
+            Math.floor((Math.random() * 100) + 1), 
+            Math.floor((Math.random() * 100) + 1),
+            Math.floor((Math.random() * 100) + 1), 
+            Math.floor((Math.random() * 100) + 1),
+            Math.floor((Math.random() * 100) + 1)], label: 'Series B'}
+  ];
+
   constructor(private http: HttpClient) {}
 
   getNFLScores(): Observable<NFLScore[]>{
@@ -78,6 +97,10 @@ export class ScoresService implements iScoreService{
     const url = "https://metr-api.herokuapp.com/locations";
     return Observable.of(this.mlb_scores);
     //return this.http.get(url).map((res: Response) => res.json());
+  }
+
+  getGraphStats(): Observable<any>{
+    return Observable.of(this.graph_data);
   }
 
 }
