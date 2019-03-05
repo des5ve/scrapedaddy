@@ -22,6 +22,12 @@ import { ChartsModule } from 'ng2-charts';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ScoreboardPickerComponent } from './scoreboard-picker/scoreboard-picker.component';
 import { TwitterWidgetComponent } from './twitter-widget/twitter-widget.component';
+import { NhlScoresComponent } from './nhl-scores/nhl-scores.component';
+import { BetdocketComponent } from './betdocket/betdocket.component';
+import { GolfScoresComponent } from './golf-scores/golf-scores.component';
+import { WagersComponent } from './wagers/wagers.component';
+import { CfbScoresComponent } from './cfb-scores/cfb-scores.component';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +36,7 @@ import { TwitterWidgetComponent } from './twitter-widget/twitter-widget.componen
     NflScoresComponent,
     NbaScoresComponent,
     MlbScoresComponent,
+    NhlScoresComponent,
     BettingModalComponent,
     SignUpComponent,
     SignInComponent,
@@ -37,7 +44,11 @@ import { TwitterWidgetComponent } from './twitter-widget/twitter-widget.componen
     StatisticsComponent,
     NavBarComponent,
     ScoreboardPickerComponent,
-    TwitterWidgetComponent
+    TwitterWidgetComponent,
+    BetdocketComponent,
+    GolfScoresComponent,
+    WagersComponent,
+    CfbScoresComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +60,10 @@ import { TwitterWidgetComponent } from './twitter-widget/twitter-widget.componen
         {path: 'nfl-scores', component: NflScoresComponent},
         {path: 'nba-scores', component: NbaScoresComponent},
         {path: 'mlb-scores', component: MlbScoresComponent},
+        {path: 'nhl-scores', component: NhlScoresComponent},
+        {path: 'golf-scores', component: GolfScoresComponent},
+        {path: 'cfb-scores', component: CfbScoresComponent},
+        {path: 'wagers', component: WagersComponent},
         {path: '', redirectTo: 'nfl-scores', pathMatch: 'full'}
     ]),
     NgbModule.forRoot()

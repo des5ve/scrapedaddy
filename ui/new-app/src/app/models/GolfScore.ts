@@ -1,0 +1,23 @@
+export class GolfScore{
+    public gameId: number;
+    public player: string;
+    public hole1score: number;
+    public hole2score: number;
+    public hole3score: number;
+    public hole4score: number;
+    public hole5score: number;
+    public hole6score: number;
+    public hole7score: number;
+    public hole8score: number;
+    public hole9score: number;
+    public hole10score: number;
+    public hole11score: number;
+    public hole12score: number;
+    public hole13score: number;
+    public hole14score: number;
+    public hole15score: number;
+    public hole16score: number;
+    public hole17score: number;
+    public hole18score: number;
+    public totalscore: number;
+  }

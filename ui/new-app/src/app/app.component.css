@@ -33,3 +33,8 @@
 .bg-black{
   background-color: black;
 }
+
+
+.navbar-brand{
+  font-family: 'Bungee Inline';
+}
