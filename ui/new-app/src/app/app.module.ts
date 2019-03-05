@@ -11,9 +11,7 @@ import { NbaScoresComponent } from './nba-scores/nba-scores.component';
 import { MlbScoresComponent } from './mlb-scores/mlb-scores.component';
 import { BettingModalComponent } from './betting-modal/betting-modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SignUpComponent } from './sign-up/sign-up.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {SignInComponent} from './sign-in/sign-in.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationService } from './services/authentication.service';
 import { RecentGamesWidgetComponent } from './recent-games-widget/recent-games-widget.component';
@@ -22,6 +20,7 @@ import { ChartsModule } from 'ng2-charts';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ScoreboardPickerComponent } from './scoreboard-picker/scoreboard-picker.component';
 import { TwitterWidgetComponent } from './twitter-widget/twitter-widget.component';
+import { AuthButtonComponent } from './auth-button/auth-button.component';
 
 @NgModule({
   declarations: [
@@ -30,14 +29,13 @@ import { TwitterWidgetComponent } from './twitter-widget/twitter-widget.componen
     NflScoresComponent,
     NbaScoresComponent,
     MlbScoresComponent,
-    BettingModalComponent,
-    SignUpComponent,
-    SignInComponent,
+    BettingModalComponent, 
     RecentGamesWidgetComponent,
     StatisticsComponent,
     NavBarComponent,
     ScoreboardPickerComponent,
-    TwitterWidgetComponent
+    TwitterWidgetComponent,
+    AuthButtonComponent
   ],
   imports: [
     BrowserModule,

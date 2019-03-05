@@ -1,0 +1,40 @@
+<div class="container">
+  
+  <h1>Sign Up</h1>
+  <form (ngSubmit) = "onSubmit()" #SignUpForm = "ngForm" >
+    {{diagnostic}}
+    <div class="form-group">
+      <label for="Email;">Email</label>
+      <input type="text" class="form-control" id="Email" required
+      [(ngModel)]= "model.email" name = "Email" #email = ngModel >
+      <div [hidden]="email.valid || email.pristine"
+      class="alert alert-danger">
+   Email is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="Password">Password</label>
+      <input type="text" class="form-control" id="Password" required
+      [(ngModel)]= model.password name = Password #password = ngModel>
+      <div [hidden]="password.valid || password.pristine"
+      class="alert alert-danger">
+      Password is Required
+  </div>
+    </div>
+
+    <div class="form-group">
+      <label for="NFLFave">Favorite NFL Team</label>
+      <select class="form-control" id="NFLFave" required
+      [(ngModel)]= "model.faveNFLTeam" name = "NFLFave">
+        <option *ngFor="let team of teams" [value]="team">{{team}}</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!SignUpForm.form.valid">Submit</button>
+    <button type="button" class="btn btn-default" (click)="newUser(); SignUpForm.reset()">New User</button>
+
+  </form>
+
+</div>
+
