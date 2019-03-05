@@ -17,6 +17,11 @@ import {SignInComponent} from './sign-in/sign-in.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationService } from './services/authentication.service';
 import { RecentGamesWidgetComponent } from './recent-games-widget/recent-games-widget.component';
+import { StatisticsComponent } from './statistics/statistics.component';
+import { ChartsModule } from 'ng2-charts';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ScoreboardPickerComponent } from './scoreboard-picker/scoreboard-picker.component';
+import { TwitterWidgetComponent } from './twitter-widget/twitter-widget.component';
 import { NhlScoresComponent } from './nhl-scores/nhl-scores.component';
 import { BetdocketComponent } from './betdocket/betdocket.component';
 import { GolfScoresComponent } from './golf-scores/golf-scores.component';
@@ -36,6 +41,10 @@ import { CfbScoresComponent } from './cfb-scores/cfb-scores.component';
     SignUpComponent,
     SignInComponent,
     RecentGamesWidgetComponent,
+    StatisticsComponent,
+    NavBarComponent,
+    ScoreboardPickerComponent,
+    TwitterWidgetComponent,
     BetdocketComponent,
     GolfScoresComponent,
     WagersComponent,
@@ -45,6 +54,7 @@ import { CfbScoresComponent } from './cfb-scores/cfb-scores.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    ChartsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
         {path: 'nfl-scores', component: NflScoresComponent},

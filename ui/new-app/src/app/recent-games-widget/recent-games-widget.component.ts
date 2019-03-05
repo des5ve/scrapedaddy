@@ -21,7 +21,28 @@ export class RecentGamesWidgetComponent implements OnInit {
   "location": "@",
   "result": "W",
   "score": "42-28",
-  }
+  },
+  {
+    "opponentLogo": "http://content.sportslogos.net/logos/7/167/full/960.png",
+    "opponentName": "Eagles",
+    "location": "@",
+    "result": "W",
+    "score": "42-28",
+    },
+    {
+      "opponentLogo": "http://content.sportslogos.net/logos/7/167/full/960.png",
+      "opponentName": "Eagles",
+      "location": "@",
+      "result": "W",
+      "score": "42-28",
+      },
+      {
+        "opponentLogo": "http://content.sportslogos.net/logos/7/167/full/960.png",
+        "opponentName": "Eagles",
+        "location": "@",
+        "result": "W",
+        "score": "42-28",
+        }
   ]
 
 

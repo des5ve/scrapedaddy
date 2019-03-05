@@ -11,12 +11,14 @@ import {NHLScore} from "../models/NHLScore";
 import {GolfScore} from "../models/GolfScore";
 import {CFBScore} from "../models/CFBScore";
 import { HttpClient } from '@angular/common/http';
+import { Observer } from 'rxjs/Observer';
 
 
 export interface iScoreService{
   getNFLScores(): Observable<NFLScore[]>;
   getNBAScores(): Observable<NBAScore[]>;
   getMLBScores(): Observable<MLBScore[]>;
+  getGraphStats(): Observable<any>;
   getNHLScores(): Observable<NHLScore[]>;
   getGolfScores(): Observable<GolfScore[]>;
   getCFBScores(): Observable<CFBScore[]>;
@@ -67,6 +69,23 @@ export class ScoresService implements iScoreService{
       currentStrikes: 0}
   ]
 
+  graph_data: any = [
+    {data: [Math.floor((Math.random() * 100) + 1), 
+            Math.floor((Math.random() * 100) + 1), 
+            Math.floor((Math.random() * 100) + 1), 
+            Math.floor((Math.random() * 100) + 1),
+            Math.floor((Math.random() * 100) + 1), 
+            Math.floor((Math.random() * 100) + 1),
+            Math.floor((Math.random() * 100) + 1)], label: 'Series A'},
+    {data: [Math.floor((Math.random() * 100) + 1), 
+            Math.floor((Math.random() * 100) + 1), 
+            Math.floor((Math.random() * 100) + 1), 
+            Math.floor((Math.random() * 100) + 1),
+            Math.floor((Math.random() * 100) + 1), 
+            Math.floor((Math.random() * 100) + 1),
+            Math.floor((Math.random() * 100) + 1)], label: 'Series B'}
+  ];
+  
   nhl_scores : NHLScore[] = [
     {gameId: 1, homeTeam: 'NYG', homeScore: 0, awayTeam: 'ATL', awayScore: 0, gameStatus: 'SCHEDULED', currentPeriod: 0, currentTime: '20:00',
       gameTime: '10-DEC-2017 8:30 EST', homeLosses: 2, homeWins: 0, awayWins: 2, awayLosses: 0, awayp1Score: 0, awayp2Score: 0, awayp3Score: 0,
@@ -114,6 +133,10 @@ export class ScoresService implements iScoreService{
     const url = "https://metr-api.herokuapp.com/locations";
     return Observable.of(this.mlb_scores);
     //return this.http.get(url).map((res: Response) => res.json());
+  }
+
+  getGraphStats(): Observable<any>{
+    return Observable.of(this.graph_data);
   }
 
   getNHLScores(): Observable<NHLScore[]>{

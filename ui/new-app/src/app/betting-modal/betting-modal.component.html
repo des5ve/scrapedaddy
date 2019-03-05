@@ -8,7 +8,7 @@
   <div class="parent-container">
   <div class="container left"> <app-recent-games-widget></app-recent-games-widget>
   </div>
-  <div class="modal-body container big-dad background">
+  <div class="modal-body container center-cut background">
     <div class="col">
     <div class="row"> 
             <div class = "col">
@@ -28,13 +28,13 @@
             <div class="col">{{bettingMatchUp.awayTeamName}} </div>
             <button type="button" value ="{{bettingMatchUp.awayTeamName}}, {{spread}}, {{bettingMatchUp.awayTeamSpread}}"  #betPayLoadButton (click)="toggleBet(betPayLoadButton.value)"   class="btn btn-outline-success col">{{bettingMatchUp.awayTeamSpread}}</button>
             <button type="button" value = " {{bettingMatchUp.awayTeamName}}, {{moneyLine}}, {{bettingMatchUp.awayTeamMoneyLine}}" #bettor (click)="toggleBet(bettor.value)" class="btn btn-outline-success col">{{bettingMatchUp.awayTeamMoneyLine}}</button>
-            <button type="button" value = "{{bettingMatchUp.totalO}}, {{bettingMatchUp.awayTeamName}}, {{total}}" #smusher (click)="toggleBet(smusher.value)" class="btn btn-outline-success col">{{bettingMatchUp.totalO}}</button>
+            <button type="button" value = "{{bettingMatchUp.totalO}}, {{total}}, {{bettingMatchUp.awayTeamName}}" #smusher (click)="toggleBet(smusher.value)" class="btn btn-outline-success col">{{bettingMatchUp.totalO}}</button>
         </div>
         <div class = "row">
             <div class="col">{{bettingMatchUp.homeTeamName}} </div>
             <button type="button" value =" {{bettingMatchUp.homeTeamName}}, {{spread}}, {{bettingMatchUp.homeTeamSpread}}"  #hulkSmash (click)="toggleBet(hulkSmash.value)" class="btn btn-outline-success col">{{bettingMatchUp.homeTeamSpread}}</button>
             <button type="button" value =" {{bettingMatchUp.homeTeamName}}, {{moneyLine}}, {{bettingMatchUp.homeTeamMoneyLine}}"  #smushSmush (click)="toggleBet(smushSmush.value)" class="btn btn-outline-success col">{{bettingMatchUp.homeTeamMoneyLine}}</button>
-            <button type="button" value ="{{bettingMatchUp.totalU}}, {{bettingMatchUp.homeTeamName}}, {{total}}"  #smasher (click)="toggleBet(smasher.value)" class="btn btn-outline-success col">{{bettingMatchUp.totalU}}</button>
+            <button type="button" value ="{{bettingMatchUp.totalU}}, {{total}}, {{bettingMatchUp.homeTeamName}}"  #smasher (click)="toggleBet(smasher.value)" class="btn btn-outline-success col">{{bettingMatchUp.totalU}}</button>
         </div>
       </div>
     <ng-container *ngFor = 'let limboBet of limboBets;let i = index'>
@@ -53,10 +53,10 @@
           </div>
           <div class="row">
               <div class="col">
-                  <input type="text" placeholder={{inputBet}} [(ngModel)] = 'betAmount' >
+                  <input type="text" #box (keyup)="onKey([box.value, i])" placeholder={{limboBet.risk}} [(ngModel)] = 'limboBet.risk' >
               </div>
               <div class="col right-align-text">
-                  <input type="text" placeholder={{outPutBet}} class="col right-align-text">
+                  <input type="text" placeholder={{limboBet.toWin}} class="col right-align-text">
               </div>
           </div>
     

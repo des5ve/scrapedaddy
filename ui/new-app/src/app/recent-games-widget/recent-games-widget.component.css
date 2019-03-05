@@ -3,11 +3,18 @@
 }
 .bold{
     font-style: bold;
+    
 }
 .sub-header{
     font-size: 80%;
     border-bottom: 1px solid skyblue;
+    max-width: 200px;
 
+}
+.bottom-border{
+    border-bottom: 1px solid slategray;
+    max-width: 200px;
+    height: 41px;
 }
 .logo{
     max-width: 25px;

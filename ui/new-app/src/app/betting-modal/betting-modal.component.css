@@ -9,9 +9,10 @@
 .background{
   background-color: aquamarine;
 }
-.big-dad{
+.center-cut{
   max-width: 420px;
   margin: 0px;
+  border: 0px;
 }
  .border-for-bets{
   margin: 0px;
