@@ -11,9 +11,7 @@ import { NbaScoresComponent } from './nba-scores/nba-scores.component';
 import { MlbScoresComponent } from './mlb-scores/mlb-scores.component';
 import { BettingModalComponent } from './betting-modal/betting-modal.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SignUpComponent } from './sign-up/sign-up.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {SignInComponent} from './sign-in/sign-in.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationService } from './services/authentication.service';
 import { RecentGamesWidgetComponent } from './recent-games-widget/recent-games-widget.component';
@@ -27,7 +25,7 @@ import { BetdocketComponent } from './betdocket/betdocket.component';
 import { GolfScoresComponent } from './golf-scores/golf-scores.component';
 import { WagersComponent } from './wagers/wagers.component';
 import { CfbScoresComponent } from './cfb-scores/cfb-scores.component';
-
+import { AuthButtonComponent } from './auth-button/auth-button.component';
 
 @NgModule({
   declarations: [
@@ -36,10 +34,7 @@ import { CfbScoresComponent } from './cfb-scores/cfb-scores.component';
     NflScoresComponent,
     NbaScoresComponent,
     MlbScoresComponent,
-    NhlScoresComponent,
-    BettingModalComponent,
-    SignUpComponent,
-    SignInComponent,
+    BettingModalComponent, 
     RecentGamesWidgetComponent,
     StatisticsComponent,
     NavBarComponent,
@@ -49,6 +44,7 @@ import { CfbScoresComponent } from './cfb-scores/cfb-scores.component';
     GolfScoresComponent,
     WagersComponent,
     CfbScoresComponent,
+    AuthButtonComponent
   ],
   imports: [
     BrowserModule,
